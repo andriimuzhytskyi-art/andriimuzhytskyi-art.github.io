@@ -48,6 +48,11 @@ nav a:hover {
   color: #007aff;
 }
 
+.social-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+}
+
 .social-links {
   font-size: 1.3rem;
   display: flex;
