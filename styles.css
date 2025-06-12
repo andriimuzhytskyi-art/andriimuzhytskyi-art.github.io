@@ -168,7 +168,15 @@ nav a:hover {
 /* 🧾 Подвал */
 footer {
   text-align: center;
-  padding: 2em 1em;
+  padding: 1em 1em;
   color: #777;
   font-size: 0.9em;
+}
+footer a {
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #E4405F;
 }
