@@ -48,13 +48,8 @@ nav a:hover {
   color: #007aff;
 }
 
-.social-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.5em;
-}
-
 .social-links {
-  font-size: 1.3rem; 
+  font-size: 1.3rem; /* задаёт размер и для текста, и для иконок */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -64,14 +59,9 @@ nav a:hover {
   padding: 0 1em;
 }
 
-.social-links i {
-  font-size: inherit; 
-}
-
 .social-links a {
-  font-size: 1.3rem;
-  color: #444;
   text-decoration: none;
+  color: #444;
   transition: color 0.3s;
 }
 
@@ -79,6 +69,9 @@ nav a:hover {
   color: #0077cc;
 }
 
+.social-links i {
+  font-size: inherit; 
+}
 
 
 main {
