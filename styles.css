@@ -16,9 +16,9 @@ header h1 {
 }
 
 h1 i {
-  margin-left: 0.4em; /* отступ слева от текста */
-  font-size: 0.4em; /* можно чуть меньше, если кажется крупной */
-  vertical-align: middle; /* лучше выравнивание */
+  margin-left: 0.4em; 
+  font-size: 0.6em; 
+  vvertical-align: text-top; 
 }
 
 header p {
