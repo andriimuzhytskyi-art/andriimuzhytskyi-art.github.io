@@ -14,6 +14,13 @@ header {
 header h1 {
   margin: 0.3em 0 0.2em;
 }
+
+h1 i {
+  margin-left: 0.4em; /* отступ слева от текста */
+  font-size: 0.4em; /* можно чуть меньше, если кажется крупной */
+  vertical-align: middle; /* лучше выравнивание */
+}
+
 header p {
   margin: 0.2em 0;
 }
