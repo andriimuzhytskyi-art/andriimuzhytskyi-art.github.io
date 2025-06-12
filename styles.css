@@ -63,7 +63,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   margin: 2em auto;
   max-width: 800px;
   padding: 0 1em;
@@ -81,13 +81,13 @@ nav a:hover {
   gap: 6px;
   font-weight: normal;
   text-decoration: none;
-  color: #444; /* тёмный базовый цвет для текста */
+  color: #555; /* тёмный базовый цвет для текста */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-row a i {
   transition: color 0.3s ease;
-  color: #444; /* иконка тоже тёмная по умолчанию */
+  color: #555; /* иконка тоже тёмная по умолчанию */
 }
 
 .social-row a:hover {
