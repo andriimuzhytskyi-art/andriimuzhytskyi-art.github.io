@@ -50,7 +50,15 @@ nav a:hover {
 
 
 .social-links {
-  font-size: 1.3rem; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 0 1em;
 }
 
 .social-links i {
