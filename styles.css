@@ -48,20 +48,15 @@ nav a:hover {
   color: #007aff;
 }
 
-i[class^="fa"] {
-  font-size: 2rem !important;
-  color: red !important;
-}
 
 .social-links {
-  font-size: 0.8rem; 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 700px;
-  margin: 2em auto;
-  padding: 0 1em;
+  font-size: 1.3rem; 
+}
+
+.social-links i {
+  font-size: inherit;
+  color: inherit;
+  margin-right: 0.4em;
 }
 
 .social-links a {
@@ -72,7 +67,9 @@ i[class^="fa"] {
 
 .social-links a:hover {
   color: #0077cc;
+  transform: translateY(-2px);
 }
+
 
 
 
