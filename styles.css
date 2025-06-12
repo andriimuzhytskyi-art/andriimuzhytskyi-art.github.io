@@ -81,38 +81,38 @@ nav a:hover {
   gap: 6px;
   font-weight: normal;
   text-decoration: none;
-  color: unset;
+  color: #444; /* тёмный базовый цвет для текста */
   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-row a i {
+  transition: color 0.3s ease;
+  color: #444; /* иконка тоже тёмная по умолчанию */
 }
 
 .social-row a:hover {
   transform: translateY(-2px);
-  color: #0077cc;
 }
 
-.social-row i {
-  font-size: inherit;
-  color: inherit;
-}
+/* При наведении — иконка получает свой цвет */
+.social-row a.youtube:hover i   { color: #FF0000; }
+.social-row a.tiktok:hover i    { color: #69C9D0; }
+.social-row a.instagram:hover i{ color: #E4405F; }
+.social-row a.facebook:hover i { color: #1877F2; }
+.social-row a.threads:hover i  { color: #000000; }
+.social-row a.viber:hover i    { color: #7360F2; }
+.social-row a.whatsapp:hover i { color: #25D366; }
 
-/* 🎯 Индивидуальные цвета */
-.behance   { color: #1769FF; }
-.dribbble  { color: #EA4C89; }
-.saatchi   { color: #CE2B37; }
-.opensea   { color: #2081E2; }
-.rarible   { color: #FEDA03; }
+.social-row a.behance:hover i  { color: #1769FF; }
+.social-row a.dribbble:hover i{ color: #EA4C89; }
+.social-row a.saatchi:hover i { color: #CE2B37; }
+.social-row a.opensea:hover i { color: #2081E2; }
+.social-row a.rarible:hover i { color: #FEDA03; }
 
-.youtube   { color: #FF0000; }
-.tiktok    { color: #69C9D0; }
-.instagram { color: #E4405F; }
-.facebook  { color: #1877F2; }
-.threads   { color: #000000; }
-.viber     { color: #7360F2; }
-.whatsapp  { color: #25D366; }
+.social-row a.patreon:hover i { color: #F96854; }
+.social-row a.paypal:hover i  { color: #003087; }
+.social-row a.bitcoin:hover i { color: #FF9900; }
 
-.patreon   { color: #F96854; }
-.paypal    { color: #003087; }
-.bitcoin   { color: #FF9900; }
 
 /* 🧾 Подвал */
 footer {
