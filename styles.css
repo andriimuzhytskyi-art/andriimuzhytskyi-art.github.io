@@ -35,17 +35,18 @@ nav a:hover {
 }
 
 .social-links {
-  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   margin: 2em auto;
-  text-align: center;
+  max-width: 700px;
 }
 
 .social-links a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #444;
   transition: color 0.3s;
+  text-decoration: none;
 }
 
 .social-links a:hover {
