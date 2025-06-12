@@ -54,16 +54,19 @@ nav a:hover {
 }
 
 .social-links {
-  font-size: 1.3rem;
+  font-size: 1.3rem; 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 700px;    
+  max-width: 700px;
   margin: 2em auto;
   padding: 0 1em;
 }
 
+.social-links i {
+  font-size: inherit; 
+}
 
 .social-links a {
   font-size: 1.3rem;
