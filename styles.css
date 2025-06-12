@@ -48,6 +48,11 @@ nav a:hover {
   color: #007aff;
 }
 
+i[class^="fa"] {
+  font-size: 2rem !important;
+  color: red !important;
+}
+
 .social-links {
   font-size: 0.8rem; 
   display: flex;
