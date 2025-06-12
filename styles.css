@@ -26,6 +26,12 @@ header p {
   margin: 0.2em 0;
 }
 
+.section-heading {
+  margin-right: 1em;
+  color: #555;
+  font-weight: bold;
+}
+
 .profile-photo {
   width: 120px;
   height: 120px;
@@ -80,7 +86,6 @@ nav a:hover {
 }
 
 .social-label {
-  flex-basis: 100%;
   text-align: center;
   color: #555;
   font-weight: bold;
