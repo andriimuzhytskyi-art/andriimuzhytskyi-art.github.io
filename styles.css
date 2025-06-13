@@ -70,9 +70,10 @@ nav a:hover {
   width: 100%;
   margin: 0 auto;
   border: 2px solid #f2f2f2;
-  padding: 16px;
   background-color: #f7f7f7;
   margin-bottom: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .parent-container {
