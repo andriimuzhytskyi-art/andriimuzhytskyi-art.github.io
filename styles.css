@@ -73,6 +73,7 @@ nav a:hover {
   background-color: #f7f7f7;
   margin-bottom: 1.5em;
   padding: 1.5em;
+  border-radius: 8px;
 }
 
 .parent-container {
