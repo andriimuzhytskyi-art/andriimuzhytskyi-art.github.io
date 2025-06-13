@@ -38,7 +38,7 @@ h1 i {
 }
 
 .intro {
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 
 main {
@@ -69,6 +69,7 @@ nav a:hover {
   border: 2px solid #f2f2f2;
   padding: 16px;
   background-color: #f7f7f7;
+  margin-bottom: 3em;
 }
 
 .parent-container {
