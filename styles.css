@@ -215,6 +215,12 @@ nav a:hover {
   .intro {
     margin-bottom: 2px;
   }
+
+  .intro-text,
+  .campaign-box {
+    margin-bottom: 1.5rem;
+  }
+
 }
 
 
