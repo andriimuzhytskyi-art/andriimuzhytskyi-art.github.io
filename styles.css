@@ -41,7 +41,7 @@ h1 i {
 }
 
 .intro {
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 
 main {
@@ -210,10 +210,6 @@ nav a:hover {
   .profile-photo {
     width: 96px;
     height: 96px;
-  }
-
-  .intro {
-    margin-bottom: 2px;
   }
 
   .intro-text,
