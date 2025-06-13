@@ -186,6 +186,20 @@ nav a:hover {
 }
 
 @media (max-width: 600px) {
+
+ main {
+    padding: 0;
+  }
+
+  .campaign-box {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+  
   header {
     padding: 2em 1em;
   }
