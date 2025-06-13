@@ -62,9 +62,9 @@ nav a:hover {
 
 /* Афиша */
 .campaign-box {
+  max-width: 830px;
   border: 2px solid #ffa500;
   padding: 16px;
-  min-width: 830px;
   background-color: #fffbea;
   font-family: sans-serif;
 }
