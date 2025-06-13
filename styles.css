@@ -6,6 +6,9 @@ body {
   color: #333;
   line-height: 1.6;
 }
+p {
+  color: #555;
+}
 
 header {
   text-align: center;
