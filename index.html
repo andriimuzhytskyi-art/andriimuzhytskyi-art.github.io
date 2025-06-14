@@ -80,7 +80,7 @@
 </div>
 
 <script>
-// Инициализируем dataLayer и gtag заранее
+// Google Analytics: заранее инициализируем dataLayer
 window.dataLayer = window.dataLayer || [];
 function gtag(){ dataLayer.push(arguments); }
 
@@ -94,28 +94,29 @@ function loadGoogleAnalytics() {
   gtag('config', 'G-2TP6MJ447Y');
 }
 
-function setCookieConsent(value) {
-  localStorage.setItem('cookieConsent', value);
-  document.getElementById('cookie-banner').style.display = 'none';
-  console.log("Cookie preference saved:", value);
-
-  if (value === 'accepted') {
-    loadGoogleAnalytics();
-  }
-}
-
-  console.log("Проверка запуска скрипта");
-
-window.addEventListener('DOMContentLoaded', () => {
+// Согласие и баннер
+(function () {
+  const banner = document.getElementById('cookie-banner');
   const consent = localStorage.getItem('cookieConsent');
 
   if (!consent) {
-    document.getElementById('cookie-banner').style.display = 'block';
+    banner.style.display = 'block';
   } else if (consent === 'accepted') {
     loadGoogleAnalytics();
   }
-});
+
+  window.setCookieConsent = function(value) {
+    localStorage.setItem('cookieConsent', value);
+    banner.style.display = 'none';
+    console.log("Cookie preference:", value);
+
+    if (value === 'accepted') {
+      loadGoogleAnalytics();
+    }
+  };
+})();
 </script>
+
 
 
 
