@@ -251,3 +251,35 @@ footer a {
 footer a:hover {
   color: #E4405F;
 }
+
+#cookie-banner {
+  position: fixed; bottom: 20px; right: 20px;
+  max-width: 320px; background: rgba(0,0,0,0.6);
+  color: #fff; padding: 16px;
+  font-family: sans-serif;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  display: none; z-index: 1000;
+}
+#cookie-banner p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+#cookie-banner .btn {
+  margin-right: 8px;
+  padding: 6px 14px;
+  font-size: 13px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#cookie-banner .btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+#cookie-banner .btn.reject {
+  border-color: #bbb; color: #bbb;
+}
