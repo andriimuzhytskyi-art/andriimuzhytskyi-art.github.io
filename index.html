@@ -72,48 +72,51 @@
 
 <!-- Cookie and Banner -->
   
-  <div id="cookie-banner">
+<!-- Cookie Banner и GA4 с согласия -->
+<div id="cookie-banner">
   <p>We use cookies to enhance your experience. Accept essential and analytics cookies. Some data may be transferred to third countries (e.g. the USA).</p>
   <button class="btn" onclick="setCookieConsent('accepted')">Accept</button>
   <button class="btn reject" onclick="setCookieConsent('rejected')">Reject</button>
 </div>
 
 <script>
+// Инициализируем dataLayer и gtag заранее
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+
+function loadGoogleAnalytics() {
+  const gaScript = document.createElement('script');
+  gaScript.setAttribute('async', '');
+  gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-2TP6MJ447Y";
+  document.head.appendChild(gaScript);
+
+  gtag('js', new Date());
+  gtag('config', 'G-2TP6MJ447Y');
+}
+
 function setCookieConsent(value) {
   localStorage.setItem('cookieConsent', value);
   document.getElementById('cookie-banner').style.display = 'none';
-  if (value === 'accepted') {
-    // Google Analytics 4 (вставляем только после согласия)
-    const script = document.createElement('script');
-    script.setAttribute('async', '');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-2TP6MJ447Y";
-    document.head.appendChild(script);
+  console.log("Cookie preference saved:", value);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-2TP6MJ447Y');
+  if (value === 'accepted') {
+    loadGoogleAnalytics();
   }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const c = localStorage.getItem('cookieConsent');
-  if (!c) {
-    document.getElementById('cookie-banner').style.display = 'block';
-  } else if (c === 'accepted') {
-    // Если пользователь уже дал согласие ранее
-    const script = document.createElement('script');
-    script.setAttribute('async', '');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-2TP6MJ447Y";
-    document.head.appendChild(script);
+  const consent = localStorage.getItem('cookieConsent');
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-2TP6MJ447Y');
+  if (!consent) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  } else if (consent === 'accepted') {
+    loadGoogleAnalytics();
   }
 });
 </script>
+
+
+
   
 </body>
 </html>
