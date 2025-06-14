@@ -267,6 +267,10 @@ footer a:hover {
   line-height: 1.4;
 }
 
+#cookie-banner h3 i {
+  margin-right: 8px;
+}
+
 #cookie-banner p {
   color: #fff;
   margin: 0 0 12px 0;
