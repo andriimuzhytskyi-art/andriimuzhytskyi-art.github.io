@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Andrii Muzhytskyi Art</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+  
+  <!-- Menu -->
+  <div class="menu-icon" onclick="toggleMenu()">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="menu-overlay" id="menuOverlay"></div> <!-- Подложка -->
+<div class="menu-panel" id="menuPanel">
+  <a href="https://andriimuzhytskyi.art/a-m-art/index.html">Home</a>
+  <a href="https://andriimuzhytskyi.art/a-m-art/gallery.html">Gallery</a>
+  <a href="https://andriimuzhytskyi.art/a-m-art/ask.html">Ask</a>
+</div>
+
+  <header>
+    <img src="profile.png" alt="Andrii Muzhytskyi Art" class="profile-photo">
+    <h1>
+      Andrii Muzhytskyi Art
+      <i class="fa-solid fa-circle-check" style="color:#1da1f2;" aria-hidden="true" title="Verified artist"></i>
+    </h1>
+    <p class="intro">Oil and digital painter. Art's my passion & drives me.</p>
+
+<h3>Explore My Gallery</h3>
+<p>Browse through selected artworks — each piece tells a story beyond the visible.</p>
+
+
+<div class="gallery-container">
+  <div class="gallery-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="oil">Oil</button>
+    <button class="filter-btn" data-filter="digital">Digital</button>
+  </div>
+  
+  <!--Pictures-->
+  <div class="gallery-grid">
+    
+  <!--Sprouts in a White Pitcher-->
+  <div class="artwork" data-category="oil">
+    <div class="artwork-card">
+      <div class="image-container">
+        <img src="gallery/SketchOnCardboard_1.jpeg" alt="Sprouts in a White Pitcher" 
+         loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+        
+      <div class="artwork-info">
+        <h3>Sprouts in a White Pitcher</h3>
+        <p>Corrugated cardboard · Oil · 18×28cm · 2024</p>
+      </div>
+    </div>
+  </div>
+    
+    <!-- Potatoes and onions -->
+   <div class="artwork" data-category="oil">
+    <div class="artwork-card">
+      <div class="image-container">
+        <img src="gallery/PotatoesAndOnions.jpeg" alt="Potatoes and onions" 
+         loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+        
+      <div class="artwork-info">
+        <h3>Potatoes and onions</h3>
+        <p>Corrugated cardboard · Oil · 15×15cm · 2024</p>
+      </div>
+    </div>
+  </div>  
+
+    
+  </div>
+</div>
+
+
+    
+<div class="social-row">
+  <span class="section-heading">My Work ➠</span>
+  <a href="https://www.behance.net/andriimuzhytskyi_art" class="behance"><i class="fab fa-behance"></i> Behance</a>
+  <a href="https://dribbble.com/andriimuzhytskyi_art" class="dribbble"><i class="fab fa-dribbble"></i> Dribbble</a>
+  <a href="https://www.saatchiart.com/andriimuzhytskyi" class="saatchi"><i class="fas fa-palette"></i> Saatchi Art</a>
+  <a href="https://opensea.io/andriimuzhytskyi_art" class="opensea"><i class="fa-regular fa-image"></i> OpenSea</a>
+  <a href="https://rarible.com/andriimuzhytskyi_art" class="rarible"><i class="fa-regular fa-image"></i> Rarible</a>
+</div>
+
+<div class="social-row">
+  <span class="section-heading">Socials ➠</span>
+  <a href="https://www.youtube.com/channel/UCO5Juwk5NtFqss3I5OoQfqg" class="youtube"><i class="fab fa-youtube"></i> YouTube</a>
+  <a href="https://tiktok.com/@andriimuzhytskyi.art" class="tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+  <a href="https://instagram.com/andriimuzhytskyi.art/" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+  <a href="https://facebook.com/profile.php?id=61571020064886" class="facebook"><i class="fab fa-facebook"></i> Facebook</a>
+  <a href="https://www.threads.com/@andriimuzhytskyi.art" class="threads"><i class="fab fa-threads"></i> Threads</a>
+  <a href="https://invite.viber.com/..." class="viber"><i class="fab fa-viber"></i> Viber</a>
+  <a href="https://chat.whatsapp.com/..." class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<div class="social-row">
+  <span class="section-heading">Donations ➠</span>
+  <a href="https://www.patreon.com/andriimuzhytskyi_art" class="patreon"><i class="fab fa-patreon"></i> Patreon</a>
+  <a href="http://paypal.me/AndriiMuzhytskyi" class="paypal"><i class="fab fa-paypal"></i> PayPal</a>
+  <a href="https://coinsend.to/@andriimuzhytskyi.art" class="bitcoin"><i class="fab fa-bitcoin"></i> CoinSend</a>
+</div>
+
+  </header>
+ 
+<footer>
+  <p><span id="current-year"></span> © Andrii Muzhytskyi Art</p>
+</footer>
+
+<!-- Cookie and Banner -->
+  
+<!-- Cookie Banner и GA4 с согласия -->
+<div id="cookie-banner">
+  <h3><i class="fa-solid fa-cookie-bite"></i>Cookies & Analytics</h3>
+  <p>We use cookies to enhance your experience. Accept essential and analytics cookies. Some data may be transferred to third countries (e.g. the USA).</p>
+  <button class="btn" onclick="setCookieConsent('accepted')">Accept</button>
+  <button class="btn reject" onclick="setCookieConsent('rejected')">Reject</button>
+</div>
+
+
+  <script>
+// Gallery
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    // Update active button
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    
+    // Filter artworks
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.artwork').forEach(artwork => {
+      artwork.style.display = (filter === 'all' || artwork.dataset.category === filter) 
+        ? 'block' 
+        : 'none';
+    });
+  });
+});
+    
+  // Установка текущего года в футере
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  // Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+
+  function loadGoogleAnalytics() {
+    try {
+      const gaScript = document.createElement('script');
+      gaScript.setAttribute('async', '');
+      gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-2TP6MJ447Y";
+      document.head.appendChild(gaScript);
+
+      gtag('js', new Date());
+      gtag('config', 'G-2TP6MJ447Y');
+    } catch (e) {
+      console.error('Error loading Google Analytics:', e);
+    }
+  }
+
+  // Cookie Consent
+  (function() {
+    const banner = document.getElementById('cookie-banner');
+    const consent = localStorage.getItem('cookieConsent');
+
+    if (!consent) {
+      banner.style.display = 'block';
+    } else if (consent === 'accepted') {
+      loadGoogleAnalytics();
+    }
+
+    window.setCookieConsent = function(value) {
+      localStorage.setItem('cookieConsent', value);
+      banner.style.display = 'none';
+      
+      if (value === 'accepted') {
+        loadGoogleAnalytics();
+      }
+    };
+  })();
+
+  // Menu Toggle
+  function toggleMenu() {
+    const panel = document.getElementById('menuPanel');
+    const overlay = document.getElementById('menuOverlay');
+    const icon = document.querySelector('.menu-icon i');
+
+    panel.classList.toggle('show');
+    overlay.classList.toggle('show');
+    
+    // Меняем иконку
+    if (panel.classList.contains('show')) {
+      icon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+      icon.classList.replace('fa-xmark', 'fa-bars');
+    }
+  }
+
+  // Закрытие меню по клику вне области или по Escape
+  document.addEventListener('click', function(e) {
+    const panel = document.getElementById('menuPanel');
+    const icon = document.querySelector('.menu-icon');
+    
+    if (!panel.contains(e.target) && !icon.contains(e.target) && panel.classList.contains('show')) {
+      toggleMenu();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('menuPanel').classList.contains('show')) {
+      toggleMenu();
+    }
+  });
+
+    document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.artwork').forEach(item => {
+    if (!item.querySelector('img') || item.querySelector('img').src.includes('undefined')) {
+      item.style.display = 'none';
+    }
+  });
+});
+</script>
+
+  </div>
+</body>
+</html>
