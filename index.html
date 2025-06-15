@@ -7,8 +7,24 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" crossorigin>
+  <link rel="preload" href="profile.png" as="image">
 </head>
 <body>
+  <div class="container">
+  
+  <!-- Menu -->
+<div class="menu-icon" onclick="toggleMenu()" aria-label="Open menu">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="menu-overlay" id="menuOverlay"></div> <!-- Background layer -->
+<div class="menu-panel" id="menuPanel">
+  <a href="https://andriimuzhytskyi.art/a-m-art/index.html">Home</a>
+  <a href="https://andriimuzhytskyi.art/a-m-art/gallery.html">Gallery</a>
+  <a href="https://andriimuzhytskyi.art/a-m-art/ask.html">Ask</a>
+  </div>
+
   <header>
     <img src="profile.png" alt="Andrii Muzhytskyi Art" class="profile-photo">
     <h1>
@@ -22,7 +38,14 @@
   <div class="campaign-content">
     <h3>Solar Cycle — Oil Paintings Inspired by the Sun’s Emotions</h3>
     <p>A series of 5 expressive oil paintings capturing the sun’s moods as metaphors for life, emotions, and time.</p>
-    <a class="campaign-button" href="https://www.kickstarter.com/projects/andriimuzhytskyi-art/solar-cycle-oil-paintings-inspired-by-the-suns-emotions" target="_blank">Explore on Kickstarter</a>
+    <form action="https://www.kickstarter.com/projects/andriimuzhytskyi-art/solar-cycle-oil-paintings-inspired-by-the-suns-emotions" 
+      method="get" 
+      target="_blank"
+      style="display: inline;">
+  <button type="submit" class="campaign-button">
+    Explore on Kickstarter
+  </button>
+</form>
   </div>
   </div>
 
@@ -54,25 +77,15 @@
   <a href="https://coinsend.to/@andriimuzhytskyi.art" class="bitcoin"><i class="fab fa-bitcoin"></i> CoinSend</a>
 </div>
 
-    <!-- Menu
-    <nav>
-      <a href="#blog">Blog</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
-    </nav>
-    -->
   </header>
- <!-- Main <main>-->
-    <!-- Blog preview and gallery sections go here -->
-  <!-- </main>-->
  
-  <footer>
-    <p>2025 © Andrii Muzhytskyi Art · <a href="mailto:andriimuzhytskyi.art@gmail.com">Contact</a></p>
-  </footer>
+<footer>
+  <p><span id="current-year"></span> © Andrii Muzhytskyi Art</p>
+</footer>
 
 <!-- Cookie and Banner -->
   
-<!-- Cookie Banner и GA4 с согласия -->
+<!-- Cookie Banner and GA4-->
 <div id="cookie-banner">
   <h3><i class="fa-solid fa-cookie-bite"></i>Cookies & Analytics</h3>
   <p>We use cookies to enhance your experience. Accept essential and analytics cookies. Some data may be transferred to third countries (e.g. the USA).</p>
@@ -81,46 +94,82 @@
 </div>
 
 <script>
-// Google Analytics: заранее инициализируем dataLayer
-window.dataLayer = window.dataLayer || [];
-function gtag(){ dataLayer.push(arguments); }
+  // Years Footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 
-function loadGoogleAnalytics() {
-  const gaScript = document.createElement('script');
-  gaScript.setAttribute('async', '');
-  gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-2TP6MJ447Y";
-  document.head.appendChild(gaScript);
+  // Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
 
-  gtag('js', new Date());
-  gtag('config', 'G-2TP6MJ447Y');
-}
+  function loadGoogleAnalytics() {
+    try {
+      const gaScript = document.createElement('script');
+      gaScript.setAttribute('async', '');
+      gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-2TP6MJ447Y";
+      document.head.appendChild(gaScript);
 
-// Согласие и баннер
-(function () {
-  const banner = document.getElementById('cookie-banner');
-  const consent = localStorage.getItem('cookieConsent');
-
-  if (!consent) {
-    banner.style.display = 'block';
-  } else if (consent === 'accepted') {
-    loadGoogleAnalytics();
+      gtag('js', new Date());
+      gtag('config', 'G-2TP6MJ447Y');
+    } catch (e) {
+      console.error('Error loading Google Analytics:', e);
+    }
   }
 
-  window.setCookieConsent = function(value) {
-    localStorage.setItem('cookieConsent', value);
-    banner.style.display = 'none';
-    console.log("Cookie preference:", value);
+  // Cookie Consent
+  (function() {
+    const banner = document.getElementById('cookie-banner');
+    const consent = localStorage.getItem('cookieConsent');
 
-    if (value === 'accepted') {
+    if (!consent) {
+      banner.style.display = 'block';
+    } else if (consent === 'accepted') {
       loadGoogleAnalytics();
     }
-  };
-})();
+
+    window.setCookieConsent = function(value) {
+      localStorage.setItem('cookieConsent', value);
+      banner.style.display = 'none';
+      
+      if (value === 'accepted') {
+        loadGoogleAnalytics();
+      }
+    };
+  })();
+
+  // Menu Toggle
+  function toggleMenu() {
+    const panel = document.getElementById('menuPanel');
+    const overlay = document.getElementById('menuOverlay');
+    const icon = document.querySelector('.menu-icon i');
+
+    panel.classList.toggle('show');
+    overlay.classList.toggle('show');
+    
+    // Andere Icons
+    if (panel.classList.contains('show')) {
+      icon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+      icon.classList.replace('fa-xmark', 'fa-bars');
+    }
+  }
+
+  // Close Menu
+  document.addEventListener('click', function(e) {
+    const panel = document.getElementById('menuPanel');
+    const icon = document.querySelector('.menu-icon');
+    
+    if (!panel.contains(e.target) && !icon.contains(e.target) && panel.classList.contains('show')) {
+      toggleMenu();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('menuPanel').classList.contains('show')) {
+      toggleMenu();
+    }
+  });
 </script>
 
-
-
-
-  
+  </div>
 </body>
 </html>
