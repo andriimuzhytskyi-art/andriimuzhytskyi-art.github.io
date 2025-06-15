@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
   <title>Andrii Muzhytskyi Art</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" crossorigin>
+  <link rel="preload" href="profile.png" as="image">
 </head>
 <body>
   <div class="container">
@@ -17,7 +18,7 @@
   <i class="fa-solid fa-bars"></i>
 </div>
 
-<div class="menu-overlay" id="menuOverlay"></div> <!-- Подложка -->
+<div class="menu-overlay" id="menuOverlay"></div> <!-- Background layer -->
 <div class="menu-panel" id="menuPanel">
   <a href="https://andriimuzhytskyi.art/a-m-art/index.html">Home</a>
   <a href="https://andriimuzhytskyi.art/a-m-art/gallery.html">Gallery</a>
@@ -117,7 +118,7 @@
 
 <!-- Cookie and Banner -->
   
-<!-- Cookie Banner и GA4 с согласия -->
+<!-- Cookie Banner and GA4-->
 <div id="cookie-banner">
   <h3><i class="fa-solid fa-cookie-bite"></i>Cookies & Analytics</h3>
   <p>We use cookies to enhance your experience. Accept essential and analytics cookies. Some data may be transferred to third countries (e.g. the USA).</p>
@@ -144,7 +145,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
     
-  // Установка текущего года в футере
+  // Years in Footer
   document.getElementById('current-year').textContent = new Date().getFullYear();
 
   // Google Analytics
@@ -195,7 +196,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     panel.classList.toggle('show');
     overlay.classList.toggle('show');
     
-    // Меняем иконку
+    // Andere Icons
     if (panel.classList.contains('show')) {
       icon.classList.replace('fa-bars', 'fa-xmark');
     } else {
@@ -203,7 +204,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     }
   }
 
-  // Закрытие меню по клику вне области или по Escape
+  // Close Menu
   document.addEventListener('click', function(e) {
     const panel = document.getElementById('menuPanel');
     const icon = document.querySelector('.menu-icon');
