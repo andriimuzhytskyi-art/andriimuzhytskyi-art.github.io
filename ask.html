@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
   <title>Andrii Muzhytskyi Art</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" crossorigin>
+  <link rel="preload" href="profile.png" as="image">
 </head>
 <body>
   <div class="container">
@@ -17,7 +18,7 @@
   <i class="fa-solid fa-bars"></i>
 </div>
 
-<div class="menu-overlay" id="menuOverlay"></div> <!-- Подложка -->
+<div class="menu-overlay" id="menuOverlay"></div> <!-- Background layer -->
 <div class="menu-panel" id="menuPanel">
   <a href="https://andriimuzhytskyi.art/a-m-art/index.html">Home</a>
   <a href="https://andriimuzhytskyi.art/a-m-art/gallery.html">Gallery</a>
@@ -109,7 +110,7 @@
 
 <!-- Cookie and Banner -->
   
-<!-- Cookie Banner и GA4 с согласия -->
+<!-- Cookie Banner and GA4 -->
 <div id="cookie-banner">
   <h3><i class="fa-solid fa-cookie-bite"></i>Cookies & Analytics</h3>
   <p>We use cookies to enhance your experience. Accept essential and analytics cookies. Some data may be transferred to third countries (e.g. the USA).</p>
@@ -122,10 +123,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
-  // Инициализация EmailJS (замените YOUR_USER_ID на ваш реальный ID)
+  // Initializing EmailJS (replace YOUR_USER_ID with your actual ID)
   emailjs.init('1lul3eYNv4_lSG11d');
 
-  // Генерация сложной капчи
+  // Generating a complex CAPTCHA
   function generateCaptcha() {
     const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%^&*";
     let result = '';
@@ -135,7 +136,7 @@
     return result;
   }
 
-  // Обновление счетчика символов
+  // Updating character counter
   function updateCharCounter() {
     const textarea = document.getElementById('message');
     const counter = document.getElementById('charCounter');
@@ -149,9 +150,9 @@
     }
   }
 
-  // Инициализация формы
+  // Form initialization
   document.addEventListener('DOMContentLoaded', function() {
-    // Капча
+    // Captcha
     let captchaText = generateCaptcha();
     document.getElementById('captcha').textContent = captchaText;
     
@@ -161,15 +162,15 @@
       document.getElementById('captchaInput').value = '';
     });
 
-    // Счетчик символов
+    // Character counter
     document.getElementById('message').addEventListener('input', updateCharCounter);
     updateCharCounter();
 
-    // Валидация и отправка формы
+    // Validation
     document.getElementById('askForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Проверка капчи
+      // Captcha
       const userInput = document.getElementById('captchaInput').value.trim();
       if (userInput !== captchaText) {
         document.getElementById('captchaError').textContent = 'Incorrect verification code';
@@ -181,7 +182,7 @@
       
       document.getElementById('captchaError').textContent = '';
       
-      // Сбор данных формы
+      // Data  form
       const formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
@@ -189,7 +190,7 @@
         message: document.getElementById('message').value
       };
 
-      // Отправка через EmailJS
+      // Send from EmailJS
       emailjs.send('service_drpezxf', 'template_of3ejpo', formData)
         .then(function(response) {
           alert('Your question has been sent successfully!');
@@ -206,7 +207,7 @@
 </script>
 
   <script>
-  // Установка текущего года в футере
+  // Years code in Footer
   document.getElementById('current-year').textContent = new Date().getFullYear();
 
   // Google Analytics
@@ -257,7 +258,7 @@
     panel.classList.toggle('show');
     overlay.classList.toggle('show');
     
-    // Меняем иконку
+    // Andere Icons
     if (panel.classList.contains('show')) {
       icon.classList.replace('fa-bars', 'fa-xmark');
     } else {
@@ -265,7 +266,7 @@
     }
   }
 
-  // Закрытие меню по клику вне области или по Escape
+  // Close menu
   document.addEventListener('click', function(e) {
     const panel = document.getElementById('menuPanel');
     const icon = document.querySelector('.menu-icon');
