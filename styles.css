@@ -641,17 +641,17 @@ footer a:hover {
 /*Crypto*/
 .crypto-container {
     display: flex;
-    justify-content: space-between;
-    max-width: 900px; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
-    gap: 20px; 
 }
 
 .crypto-column {
-    flex: 1;
-    min-width: 0;
+    flex: 0 0 calc(33.333% - 14px);
+    box-sizing: border-box;
     background: #f8f9fa;
     border-radius: 10px;
     padding: 20px;
@@ -738,10 +738,12 @@ footer a:hover {
 @media (max-width: 768px) {
     .crypto-container {
         flex-direction: column;
-        gap: 20px; 
+        gap: 20px;
+        padding: 16px; 
     }
     .crypto-column {
-        width: 100%;
+        flex: 0 0 100%; 
+        max-width: 100%; 
         margin-bottom: 0; 
     }
 }
