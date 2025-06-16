@@ -11,6 +11,17 @@
   <link rel="preload" href="profile.png" as="image">
 </head>
 <body>
+
+  <div id="qrcode"></div>
+
+  <!-- Подключаем библиотеку -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- Генерируем QR-код -->
+  <script>
+    new QRCode(document.getElementById("qrcode"), "https://example.com");
+  </script>
+  
   <div class="container">
   
   <!-- Menu -->
