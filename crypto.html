@@ -270,75 +270,120 @@ Every contribution means a lot — thank you!</p>
 });
 </script>
 
+<!--QR-CODE-->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
     <script>
-        // Generation QR-CODE
-        document.addEventListener('DOMContentLoaded', function() {
+    // Format wallet address for display
+    function formatAddress(address) {
+        if (!address) return '';
+        if (address.length <= 12) return address;
+        if (address.startsWith('0x') && address.length === 42) {
+            return `${address.substring(0, 8)}...${address.substring(38)}`;
+        }
+        return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
+    }
+
+    // Generation QR-CODE
+    document.addEventListener('DOMContentLoaded', function() {
+        // Format all addresses
+        document.querySelectorAll('.wallet-address').forEach(el => {
+            const fullAddress = el.textContent;
+            el.textContent = formatAddress(fullAddress);
+            el.setAttribute('title', fullAddress); // Show full address on hover
+        });
+
+        // Generate QR codes only if library is available
+        if (typeof QRCode !== 'undefined') {
             // BTC QR
             new QRCode(document.getElementById("btc-qr"), {
                 text: "bitcoin:bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk",
                 width: 150,
-                height: 150
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
             });
             
             // BTC Lightning QR
             new QRCode(document.getElementById("btc-lightning-qr"), {
                 text: "lightning:lnbc1p59q8yppp5pza2ur3n0sqw9hfgwapk7sx87psjz4cppzumaus5faukcydfn0jsdqqcqzzgxqyz5vqrzjqf0wu22xsefd8gzu0m9n93g2khea86l6yy26en9v46g9e6hk7v9z8lhxhg6m9xwx8vqqqqryqqqqthqqpysp52yc3pjxkly5fanvj48hxlhph56gs32quxtyrajlmzupurtp8gv5s9qrsgqsm6zehy9mvkhl9nc3w73yaj2ygg7tn0hqa8k5r4vamrh2z5c3ctz9wa3sdgaatgeltqwh3l25um3de0ls0q3260wxpsqk526tlln6mcqsugdqs",
                 width: 150,
-                height: 150
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
             });
             
             // ETH QR
             new QRCode(document.getElementById("eth-qr"), {
                 text: "ethereum:0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0",
                 width: 150,
-                height: 150
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
             });
             
             // SOL QR
             new QRCode(document.getElementById("sol-qr"), {
                 text: "solana:7PwVa5JdKWGc6kE3L6w3wJVzf5NL7iWQcYd8EpGB8nDq",
                 width: 150,
-                height: 150
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
             });
 
             // Polygon QR
             new QRCode(document.getElementById("polygon-matic-qr"), {
                 text: "polygon:0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0",
                 width: 150,
-                height: 150
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
             });
             
             // Base QR
             new QRCode(document.getElementById("base-qr"), {
                 text: "base:0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0",
                 width: 150,
-                height: 150
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
             });
             
             // Sui QR
             new QRCode(document.getElementById("sui-qr"), {
                 text: "sui:0x85822b44069014ca5841f44ca78222376bbf31ea0d2567c12a418ba37da84355",
                 width: 150,
-                height: 150
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
             });
+        } else {
+            console.error('QRCode library not loaded');
+        }
+    });
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            showNotification();
+        }, function(err) {
+            console.error('Failed to copy text: ', err);
         });
+    }
 
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-                showNotification();
-            }, function(err) {
-                console.error('Failed to copy text: ', err);
-            });
-        }
-
-        function showNotification() {
-            const notification = document.getElementById('notification');
-            notification.classList.add('show');
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 2000);
-        }
-    </script>
+    function showNotification() {
+        const notification = document.getElementById('notification');
+        notification.classList.add('show');
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 2000);
+    }
+</script>
 
   </div>
 </body>
