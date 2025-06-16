@@ -270,9 +270,10 @@ Every contribution means a lot — thank you!</p>
 });
 </script>
 
-<!--QR-CODE-->
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
-    <script>
+
+<!-- QR-CODE -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+<script>
     // Format wallet address for display
     function formatAddress(address) {
         if (!address) return '';
@@ -283,17 +284,23 @@ Every contribution means a lot — thank you!</p>
         return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
     }
 
-    // Generation QR-CODE
-    document.addEventListener('DOMContentLoaded', function() {
+    // Wait for both DOM and QRCode library to be ready
+    function initQRCode() {
         // Format all addresses
         document.querySelectorAll('.wallet-address').forEach(el => {
             const fullAddress = el.textContent;
             el.textContent = formatAddress(fullAddress);
-            el.setAttribute('title', fullAddress); // Show full address on hover
+            el.setAttribute('title', fullAddress);
         });
 
-        // Generate QR codes only if library is available
-        if (typeof QRCode !== 'undefined') {
+        // Check if QRCode is loaded
+        if (typeof QRCode === 'undefined') {
+            console.error('QRCode library not loaded');
+            return;
+        }
+
+        // Generate QR codes with error handling
+        try {
             // BTC QR
             new QRCode(document.getElementById("btc-qr"), {
                 text: "bitcoin:bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk",
@@ -363,10 +370,17 @@ Every contribution means a lot — thank you!</p>
                 colorLight: "#ffffff",
                 correctLevel: QRCode.CorrectLevel.H
             });
-        } else {
-            console.error('QRCode library not loaded');
+        } catch (e) {
+            console.error('Error generating QR codes:', e);
         }
-    });
+    }
+
+    // Wait for everything to load
+    if (document.readyState === 'complete') {
+        initQRCode();
+    } else {
+        window.addEventListener('load', initQRCode);
+    }
 
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(function() {
