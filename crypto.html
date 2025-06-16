@@ -83,7 +83,7 @@ Every contribution means a lot — thank you!</p>
             <!-- Polygon -->
         <div class="crypto-column">
             <div class="crypto-item">
-                <div class="qr-code" id="sol-qr"></div>
+                <div class="qr-code" id="polygon-matic-qr"></div>
                 <div class="address-container">
                   <span class="wallet-address">0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0</span>
                   <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0')"></i>
@@ -234,26 +234,35 @@ Every contribution means a lot — thank you!</p>
         document.addEventListener('DOMContentLoaded', function() {
             // BTC QR
             new QRCode(document.getElementById("btc-qr"), {
-                text: "bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+                text: "Bitcoin:bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk",
                 width: 150,
                 height: 150
             });
             
             // ETH QR
             new QRCode(document.getElementById("eth-qr"), {
-                text: "ethereum:0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
+                text: "Ethereum:0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0",
                 width: 150,
                 height: 150
             });
             
-            // USDT QR
-            new QRCode(document.getElementById("usdt-qr"), {
-                text: "ethereum:0xdAC17F958D2ee523a2206206994597C13D831ec7",
+            // SOL QR
+            new QRCode(document.getElementById("sol-qr"), {
+                text: "Solana:7PwVa5JdKWGc6kE3L6w3wJVzf5NL7iWQcYd8EpGB8nDq",
+                width: 150,
+                height: 150
+            });
+
+          // Polygon Matic
+            new QRCode(document.getElementById("polygon-matic-qr"), {
+                text: "Polygon Matic:0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0",
                 width: 150,
                 height: 150
             });
         });
 
+
+  
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(function() {
                 showNotification();
