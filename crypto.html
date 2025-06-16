@@ -11,18 +11,6 @@
   <link rel="preload" href="profile.png" as="image">
 </head>
 <body>
-
-  <div id="qrcode"></div>
-
-  <!-- Подключаем библиотеку -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-  <!-- Генерируем QR-код -->
-  <script>
-    new QRCode(document.getElementById("qrcode"), "https://example.com");
-  </script>
-  
-  <div class="container">
   
   <!-- Menu -->
   <div class="menu-icon" onclick="toggleMenu()">
@@ -283,7 +271,8 @@ Every contribution means a lot — thank you!</p>
 
 
 <!-- QR-CODE -->
-<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 <script>
     // Format wallet address for display
     function formatAddress(address) {
