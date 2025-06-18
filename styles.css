@@ -20,6 +20,10 @@ p {
   color: #555;
 }
 
+p-crypto {
+  max-width: 860px;
+}
+
 /* Header */
 header {
   text-align: center;
