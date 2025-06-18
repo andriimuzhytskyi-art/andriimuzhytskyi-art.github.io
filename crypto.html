@@ -37,6 +37,12 @@
 
 <h3>Support My Work with Crypto</h3>
 <p>If you enjoy my art, your support means the world — thank you!</p>
+<p>I accept any tokens on the following networks:</p>
+<p class="p-crypto">Bitcoin (BTC) — Bitcoin Network, Bitcoin Lightning — Lightning Network, Ethereum (ETH, ERC-20 tokens) — Ethereum Mainnet, 
+  Polygon (MATIC, ERC-20 tokens) — Polygon Network, Base (ETH, ERC-20 tokens) — Base Layer 2, 
+  Solana (SOL, SPL tokens) — Solana Network, Tezos (XTZ, FA2 tokens) — Tezos Mainnet,
+  Cardano (ADA, native tokens) — Cardano Mainnet, Sui (SUI) — Sui Network
+</p>
 
  <!-- Crypto wallets -->
     
@@ -131,6 +137,33 @@
             <div class="crypto-network">Network: Sui</div>
         </div>
     </div>
+
+  <!-- Tezos -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="tezos-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">tz1WACgqT4UpeTR2WfpodWGtbU3jmWqrL21T</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('tz1WACgqT4UpeTR2WfpodWGtbU3jmWqrL21T')"></i>
+            </div>
+            <div class="crypto-name">Tezos (TEZ)</div>
+            <div class="crypto-network">Network: Tezos Mainnet</div>
+        </div>
+    </div>
+
+     <!-- Cardano -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="cardano-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">addr1qxu6yps02mdallnu07cwgdf822qa3sv0jux7ukr22rg5wm9e5grq74kmmll8clasus6jw55pmrqcl9cdaevx55x3gakqd55arm</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('addr1qxu6yps02mdallnu07cwgdf822qa3sv0jux7ukr22rg5wm9e5grq74kmmll8clasus6jw55pmrqcl9cdaevx55x3gakqd55arm')"></i>
+            </div>
+            <div class="crypto-name">Cardano (ADA)</div>
+            <div class="crypto-network">Network: Cardano Mainnet</div>
+        </div>
+    </div>
+   
 </div>
 
     <div class="notification" id="notification">Address copied!</div>
@@ -369,6 +402,28 @@
                 colorLight: "#ffffff",
                 correctLevel: QRCode.CorrectLevel.H
             });
+
+             // Tezos QR
+            new QRCode(document.getElementById("tezos-qr"), {
+                text: "tezos:tz1WACgqT4UpeTR2WfpodWGtbU3jmWqrL21T",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+             // Cardano QR
+            new QRCode(document.getElementById("tezos-qr"), {
+                text: "cardano:addr1qxu6yps02mdallnu07cwgdf822qa3sv0jux7ukr22rg5wm9e5grq74kmmll8clasus6jw55pmrqcl9cdaevx55x3gakqd55arm",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+          
         } catch (e) {
             console.error('Error generating QR codes:', e);
         }
