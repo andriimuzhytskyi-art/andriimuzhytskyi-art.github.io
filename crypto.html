@@ -150,7 +150,7 @@
     <!-- BTC -->
     <div class="crypto-column">
         <div class="crypto-item">
-            <div class="qr-code" id="btc-qr"></div>
+            <div class="qr-code" id="btc1-qr"></div>
             <div class="address-container">
                 <span class="wallet-address">bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk</span>
                 <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk')"></i>
@@ -409,6 +409,15 @@
                 correctLevel: QRCode.CorrectLevel.H
             });
 
+             // BTC1 QR
+            new QRCode(document.getElementById("btc1-qr"), {
+                text: "bitcoin:bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
           
         } catch (e) {
             console.error('Error generating QR codes:', e);
