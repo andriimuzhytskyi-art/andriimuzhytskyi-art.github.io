@@ -147,16 +147,16 @@
         </div>
     </div>
 
-    <!-- BTC -->
+    <!-- Cardano -->
     <div class="crypto-column">
         <div class="crypto-item">
-            <div class="qr-code" id="btc1-qr"></div>
+            <div class="qr-code" id="cardano-qr"></div>
             <div class="address-container">
-                <span class="wallet-address">bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk</span>
-                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk')"></i>
+                <span class="wallet-address">addr1qxu6yps02mdallnu07cwgdf822qa3sv0jux7ukr22rg5wm9e5grq74kmmll8clasus6jw55pmrqcl9cdaevx55x3gakqd55arm</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('addr1qxu6yps02mdallnu07cwgdf822qa3sv0jux7ukr22rg5wm9e5grq74kmmll8clasus6jw55pmrqcl9cdaevx55x3gakqd55arm')"></i>
             </div>
-            <div class="crypto-name">Bitcoin (BTC)</div>
-            <div class="crypto-network">Network: Bitcoin</div>
+            <div class="crypto-name">Cardano (ADA)</div>
+            <div class="crypto-network">Network: Cardano Mainnet</div>
         </div>
     </div>
    
@@ -409,9 +409,9 @@
                 correctLevel: QRCode.CorrectLevel.H
             });
 
-             // BTC1 QR
-            new QRCode(document.getElementById("btc1-qr"), {
-                text: "bitcoin:bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk",
+             // Cardano QR
+            new QRCode(document.getElementById("cardano-qr"), {
+                text: "cardano:addr1qxu6yps02mdallnu07cwgdf822qa3sv0jux7ukr22rg5wm9e5grq74kmmll8clasus6jw55pmrqcl9cdaevx55x3gakqd55arm",
                 width: 150,
                 height: 150,
                 colorDark: "#000000",
