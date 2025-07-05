@@ -870,7 +870,7 @@ footer a:hover {
 
 /* Header News */
 .news-article h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #222;
 }
@@ -888,8 +888,11 @@ footer a:hover {
   text-align: center;
 }
 .news-article figure img {
-  max-width: 100%;
+  max-width: 600px;
+  width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto; 
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -902,6 +905,9 @@ footer a:hover {
 
 /* Text */
 .news-article .news-content p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;  
   margin-bottom: 1.25rem;
   color: #333;
 }
@@ -922,5 +928,5 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .news-article h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
