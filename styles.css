@@ -927,11 +927,11 @@ footer a:hover {
 }
 
 .news-image img {
-  max-width: 250px;   
-  width: 100%;        
+max-width: 250px;
+  width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 0.5rem
+  margin: 0.5rem auto;
 }
 
 .news-title a {
