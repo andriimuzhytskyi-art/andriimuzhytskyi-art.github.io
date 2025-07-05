@@ -926,6 +926,15 @@ footer a:hover {
   font-weight: bold;
 }
 
+.news-image {
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+}
+
+
 @media (max-width: 600px) {
   .news-article h2 {
     font-size: 1.5rem;
@@ -934,3 +943,4 @@ footer a:hover {
   .news-link {
     color: #1792dd;
   }
+
