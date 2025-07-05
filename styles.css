@@ -909,7 +909,7 @@ footer a:hover {
   text-justify: inter-word;
   hyphens: auto;  
   margin-bottom: 1.25rem;
-  color: #333;
+  color: #444;
 }
 
 /* Link news */
@@ -935,7 +935,7 @@ max-width: 250px;
 }
 
 .news-title a {
-  color: #333;
+  color: #444;
   text-decoration: none; 
 }
 
