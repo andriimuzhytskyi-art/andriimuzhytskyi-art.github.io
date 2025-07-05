@@ -857,3 +857,66 @@ footer a:hover {
 .feature-card a:hover {
   background-color: #1792dd;
 }
+
+
+
+/* === News Article Styles === */
+.news-article {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+/* Header News */
+.news-article h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+/* Date */
+.news-article .date {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Picture and mini-text */
+.news-article figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.news-article figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.news-article figure figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Text */
+.news-article .news-content p {
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+
+/* Link news */
+.news-article .news-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.news-article .news-content a:hover {
+  text-decoration: none;
+}
+
+/* Autor */
+.news-article .news-content strong {
+  font-weight: bold;
+}
+
