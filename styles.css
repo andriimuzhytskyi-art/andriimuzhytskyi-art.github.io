@@ -799,12 +799,12 @@ footer a:hover {
         margin-bottom: 40px;
     }
   
-    .crypto-container {
+    .crypto-container, .news-container {
         flex-direction: column;
         gap: 20px;
         padding: 16px; 
     }
-    .crypto-column {
+    .crypto-column, .news-column {
         flex: 0 0 100%; 
         max-width: 100%; 
         margin-bottom: 0; 
