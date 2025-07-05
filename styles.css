@@ -935,10 +935,13 @@ max-width: 250px;
 }
 
 .news-title a {
-  color: #1792dd;
+  color: #333;
   text-decoration: none; 
 }
 
+.news-title a:hover {
+  color: #1792dd;
+}
 
 @media (max-width: 600px) {
   .news-article h2 {
