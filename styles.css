@@ -918,6 +918,7 @@ footer a:hover {
   text-decoration: underline;
 }
 .news-article .news-content a:hover {
+  color: #1792dd;
   text-decoration: none;
 }
 
