@@ -15,7 +15,7 @@
   <div class="container">
   
   <!-- Menu -->
-  <div class="menu-icon" onclick="toggleMenu()">
+<div class="menu-icon" onclick="toggleMenu()" aria-label="Open menu">
   <i class="fa-solid fa-bars"></i>
 </div>
 
@@ -28,7 +28,7 @@
   <a href="https://www.patreon.com/andriimuzhytskyi_art">Patreon</a>
   <a href="https://paypal.me/AndriiMuzhytskyi">PayPal</a>
   <a href="https://andriimuzhytskyi.art/crypto.html">Crypto</a>
-</div>
+  </div>
 
   <header>
     <img src="profile.png" alt="Andrii Muzhytskyi Art" class="profile-photo">
@@ -38,146 +38,48 @@
     </h1>
     <p class="intro">Oil and digital painter. Art's my passion & drives me.</p>
 
-<h3>Explore My Gallery</h3>
-<p>Browse through selected artworks — each piece tells a story beyond the visible.</p>
-
-
-<div class="gallery-container">
-  <div class="gallery-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="oil">Oil</button>
-    <button class="filter-btn" data-filter="digital">Digital</button>
+<!-- Buttons -->
+    
+<div class="features-grid">
+  <div class="feature-card">
+   <p>Work Insights</p>
+    <a href="/studio-notes.html" class="campaign-button" style="width: auto;">
+      <i class="ri-newspaper-line"></i> Studio Notes</a>
   </div>
   
-  <!--Pictures-->
-  <div class="gallery-grid">
-
-<!-- Delicate rose -->
-   <div class="artwork" data-category="oil">
-    <div class="artwork-card">
-      <div class="image-container">
-        <img src="gallery/DelicateRose.jpeg" alt="Delicate rose" 
-         loading="lazy" onerror="this.parentElement.style.display='none'">
-      </div>
-        
-      <div class="artwork-info">
-        <h3>Delicate rose</h3>
-        <p>Cotton canvas · Oil · 40×40cm · 2024</p>
-      </div>
-    </div>
-  </div>  
-    
-
-<!-- Slices of fruit and a flag -->
-   <div class="artwork" data-category="oil">
-    <div class="artwork-card">
-      <div class="image-container">
-        <img src="gallery/SlicesOfFruitAndaFlag.jpeg" alt="Slices of fruit and a flag" 
-         loading="lazy" onerror="this.parentElement.style.display='none'">
-      </div>
-        
-      <div class="artwork-info">
-        <h3>Slices of fruit and a flag</h3>
-        <p>Corrugated cardboard · Oil · 29×30cm · 2024</p>
-      </div>
-    </div>
+  <div class="feature-card">
+    <p>View my artwork</p>
+    <a href="/gallery.html" class="campaign-button" style="width: auto;">
+      <i class="ri-gallery-fill"></i> Gallery</a>
   </div>  
 
-    
- <!-- Spruce cones -->
-   <div class="artwork" data-category="oil">
-    <div class="artwork-card">
-      <div class="image-container">
-        <img src="gallery/SpruceCones.jpeg" alt="Spruce cones" 
-         loading="lazy" onerror="this.parentElement.style.display='none'">
-      </div>
-        
-      <div class="artwork-info">
-        <h3>Spruce cones</h3>
-        <p>Corrugated cardboard · Oil · 25×29cm · 2024</p>
-      </div>
-    </div>
-  </div>  
-
-    
-     <!-- Water Lily -->
-   <div class="artwork" data-category="oil">
-    <div class="artwork-card">
-      <div class="image-container">
-        <img src="gallery/WaterLily.jpeg" alt="Water Lily" 
-         loading="lazy" onerror="this.parentElement.style.display='none'">
-      </div>
-        
-      <div class="artwork-info">
-        <h3>Water Lily</h3>
-        <p>Corrugated cardboard · Oil · 28×28cm · 2024</p>
-      </div>
-    </div>
-  </div>  
-
-     <!-- Red Apple -->
-   <div class="artwork" data-category="oil">
-    <div class="artwork-card">
-      <div class="image-container">
-        <img src="gallery/RedApple.jpeg" alt="Red Apple" 
-         loading="lazy" onerror="this.parentElement.style.display='none'">
-      </div>
-        
-      <div class="artwork-info">
-        <h3>Red Apple</h3>
-        <p>Thick paper · Watercolor · 11×11cm · 2024</p>
-      </div>
-    </div>
-  </div>  
-
-        <!-- Apples and a plate -->
-   <div class="artwork" data-category="oil">
-    <div class="artwork-card">
-      <div class="image-container">
-        <img src="gallery/ApplesAndaPlate.jpeg" alt="Apples and a plate" 
-         loading="lazy" onerror="this.parentElement.style.display='none'">
-      </div>
-        
-      <div class="artwork-info">
-        <h3>Apples and a plate</h3>
-        <p>Thick paper · Oil · 21×30cm · 2024</p>
-      </div>
-    </div>
-  </div>  
-    
-    <!-- Potatoes and onions -->
-   <div class="artwork" data-category="oil">
-    <div class="artwork-card">
-      <div class="image-container">
-        <img src="gallery/PotatoesAndOnions.jpeg" alt="Potatoes and onions" 
-         loading="lazy" onerror="this.parentElement.style.display='none'">
-      </div>
-        
-      <div class="artwork-info">
-        <h3>Potatoes and onions</h3>
-        <p>Corrugated cardboard · Oil · 15×15cm · 2024</p>
-      </div>
-    </div>
-  </div>  
-
-      <!--Sprouts in a White Pitcher-->
-  <div class="artwork" data-category="oil">
-    <div class="artwork-card">
-      <div class="image-container">
-        <img src="gallery/SketchOnCardboard_1.jpeg" alt="Sprouts in a White Pitcher" 
-         loading="lazy" onerror="this.parentElement.style.display='none'">
-      </div>
-        
-      <div class="artwork-info">
-        <h3>Sprouts in a White Pitcher</h3>
-        <p>Corrugated cardboard · Oil · 18×28cm · 2024</p>
-      </div>
-    </div>
+  <div class="feature-card">
+    <p>Ask me a question</p>
+    <a href="/ask.html" class="campaign-button" style="width: auto;">
+      <i class="ri-questionnaire-line"></i> Ask</a>
   </div>
-    
-  </div>
+
 </div>
 
+
+    
+<!--    Box kickstarter
+<div class="campaign-box">
+  <div class="campaign-header">⬇ Fundraising in progress... ⬇</div>
+  <div class="campaign-content">
+    <h3>Solar Cycle — Oil Paintings Inspired by the Sun’s Emotions</h3>
+    <p>A series of 5 expressive oil paintings capturing the sun’s moods as metaphors for life, emotions, and time.</p>
+    <form action="https://www.kickstarter.com/projects/andriimuzhytskyi-art/solar-cycle-oil-paintings-inspired-by-the-suns-emotions" 
+      method="get" 
+      target="_blank"
+      style="display: inline;">
+  <button type="submit" class="campaign-button">
+    Explore on Kickstarter
+  </button>
+</form>
+  </div>
+  </div>
+-->
 
 <!--Links-->
 
@@ -242,26 +144,8 @@
   <button class="btn reject" onclick="setCookieConsent('rejected')">Reject</button>
 </div>
 
-
-  <script>
-// Gallery
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    // Update active button
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-    
-    // Filter artworks
-    const filter = this.dataset.filter;
-    document.querySelectorAll('.artwork').forEach(artwork => {
-      artwork.style.display = (filter === 'all' || artwork.dataset.category === filter) 
-        ? 'block' 
-        : 'none';
-    });
-  });
-});
-    
-  // Years in Footer
+<script>
+  // Years Footer
   document.getElementById('current-year').textContent = new Date().getFullYear();
 
   // Google Analytics
@@ -335,14 +219,6 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
       toggleMenu();
     }
   });
-
-    document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.artwork').forEach(item => {
-    if (!item.querySelector('img') || item.querySelector('img').src.includes('undefined')) {
-      item.style.display = 'none';
-    }
-  });
-});
 </script>
 
   </div>
