@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrii Muzhytskyi Art</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
+    crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="preload" href="profile.png" as="image">
+  <script src="js/code.js" defer></script>
+  <script src="js/include.js" defer></script>
+</head>
+
+<body class="loading">
+
+  <div class="container">
+
+    <!-- Menu -->
+    <div data-include="_menu.html"></div>
+
+    <header>
+      <!-- Header_up -->
+      <div data-include="_header.html"></div>
+      <h3>Ask Me a Question</h3>
+      <p>Have a question or thought? Send it here — I’ll read every message and do my best to reply.</p>
+      </header>
+
+
+<!-- Form -->
+<form id="askForm">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" name="name" required maxlength="50" placeholder="Enter your name">
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+    </div>
+    
+    <div class="form-group">
+      <label for="phone">Phone (optional)</label>
+      <input type="tel" id="phone" name="phone" pattern="[\+]\d{1,3}\d{7,14}" placeholder="+490123456789">
+    </div>
+  </div>
+  
+  <div class="form-group question-group">
+    <div class="question-header">
+      <label for="message">Your Question *</label>
+      <span id="charCounter">(0/500)</span>
+    </div>
+    <textarea id="message" name="message" rows="5" required maxlength="500" placeholder="Type your question here..."></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label>Verification Code *</label>
+    <div class="captcha-container">
+      <span class="captcha-code" id="captcha"></span>
+      <button type="button" id="captchaRefresh" title="Refresh Code">↻</button>
+      <input type="text" id="captchaInput" placeholder="Enter the code exactly" required>
+    </div>
+    <div id="captchaError" class="error"></div>
+  </div>
+  
+  <button type="submit" class="campaign-button" style="width: auto;">Submit Question</button>
+</form>
+
+<!-- Links -->
+<div data-include="_links.html"></div>
+
+<!-- Footer -->
+<div data-include="_footer.html"></div>
+
+<!-- Cookie and Banner -->
+<div id="cookie-banner">
+  <h3><i class="fa-solid fa-cookie-bite"></i>Cookies & Analytics</h3>
+  <p>We use cookies to enhance your experience. Accept essential and analytics cookies. Some data may be transferred to
+    third countries (e.g. the USA).</p>
+  <button class="btn" onclick="setCookieConsent('accepted')">Accept</button>
+  <button class="btn reject" onclick="setCookieConsent('rejected')">Reject</button>
+</div>
+
+</div>
+
+<!-- Email - captcha-->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  // Initializing EmailJS (replace YOUR_USER_ID with your actual ID)
+  emailjs.init('1lul3eYNv4_lSG11d');
+
+  // Generating a complex CAPTCHA
+  function generateCaptcha() {
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%^&*";
+    let result = '';
+    for (let i = 0; i < 6; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+  }
+
+  // Updating character counter
+  function updateCharCounter() {
+    const textarea = document.getElementById('message');
+    const counter = document.getElementById('charCounter');
+    const remaining = 500 - textarea.value.length;
+    counter.textContent = `(${textarea.value.length}/500)`;
+    
+    if (remaining < 50) {
+      counter.style.color = remaining < 20 ? 'red' : 'orange';
+    } else {
+      counter.style.color = '#666';
+    }
+  }
+
+  // Form initialization
+  document.addEventListener('DOMContentLoaded', function() {
+    // Captcha
+    let captchaText = generateCaptcha();
+    document.getElementById('captcha').textContent = captchaText;
+    
+    document.getElementById('captchaRefresh').addEventListener('click', function() {
+      captchaText = generateCaptcha();
+      document.getElementById('captcha').textContent = captchaText;
+      document.getElementById('captchaInput').value = '';
+    });
+
+    // Character counter
+    document.getElementById('message').addEventListener('input', updateCharCounter);
+    updateCharCounter();
+
+    // Validation
+    document.getElementById('askForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Captcha
+      const userInput = document.getElementById('captchaInput').value.trim();
+      if (userInput !== captchaText) {
+        document.getElementById('captchaError').textContent = 'Incorrect verification code';
+        captchaText = generateCaptcha();
+        document.getElementById('captcha').textContent = captchaText;
+        document.getElementById('captchaInput').value = '';
+        return;
+      }
+      
+      document.getElementById('captchaError').textContent = '';
+      
+      // Data  form
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
+      };
+
+      // Send from EmailJS
+      emailjs.send('service_drpezxf', 'template_of3ejpo', formData)
+        .then(function(response) {
+          alert('Your question has been sent successfully!');
+          document.getElementById('askForm').reset();
+          captchaText = generateCaptcha();
+          document.getElementById('captcha').textContent = captchaText;
+          updateCharCounter();
+        }, function(error) {
+          alert('An error occurred while sending. Please try again or contact me by another method.');
+          console.error('EmailJS Error:', error);
+        });
+    });
+  });
+
+
+// Script Cookie and Banner 
+
+  const banner = document.getElementById('cookie-banner');
+  const consent = localStorage.getItem('cookieConsent');
+
+  if (!consent && banner) {
+    banner.style.display = 'block';
+  } else if (consent === 'accepted') {
+    loadGoogleAnalytics();
+  }
+
+  window.setCookieConsent = function (value) {
+    localStorage.setItem('cookieConsent', value);
+    if (banner) banner.style.display = 'none';
+
+    if (value === 'accepted') {
+      loadGoogleAnalytics();
+    }
+  };
+
+  function loadGoogleAnalytics() {
+    console.log("GA loaded");
+  }
+
+  // Loading
+
+  window.onload = function () {
+    document.body.classList.remove('loading');
+    document.body.classList.add('loaded');
+  };
+</script>
+
+</body>
+</html>
