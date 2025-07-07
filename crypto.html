@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrii Muzhytskyi Art</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
+    crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="preload" href="profile.png" as="image">
+  <script src="js/code.js" defer></script>
+  <script src="js/include.js" defer></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Menu -->
+    <div data-include="_menu.html"></div>
+
+    <header>
+      <!-- Header_up -->
+      <div data-include="_header.html"></div>
+      <h3>Support My Work with Crypto</h3>
+      <p>If you enjoy my art, your support means the world!</p>
+      <p>You can purchase a piece or simply send a donation.</p>
+      <p>Feel free to send any tokens supported by the networks listed below — thank you!</p>
+      </header>
+
+
+    <!-- Crypto wallets -->
+    
+<div class="crypto-container">
+    <!-- BTC -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="btc-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk')"></i>
+            </div>
+            <div class="crypto-name">Bitcoin (BTC)</div>
+            <div class="crypto-network">Network: Bitcoin</div>
+        </div>
+    </div>
+
+    <!-- BTC Lightning -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="btc-lightning-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">lnbc1p59q8yppp5pza2ur3n0sqw9hfgwapk7sx87psjz4cppzumaus5faukcydfn0jsdqqcqzzgxqyz5vqrzjqf0wu22xsefd8gzu0m9n93g2khea86l6yy26en9v46g9e6hk7v9z8lhxhg6m9xwx8vqqqqryqqqqthqqpysp52yc3pjxkly5fanvj48hxlhph56gs32quxtyrajlmzupurtp8gv5s9qrsgqsm6zehy9mvkhl9nc3w73yaj2ygg7tn0hqa8k5r4vamrh2z5c3ctz9wa3sdgaatgeltqwh3l25um3de0ls0q3260wxpsqk526tlln6mcqsugdqs</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('lnbc1p59q8yppp5pza2ur3n0sqw9hfgwapk7sx87psjz4cppzumaus5faukcydfn0jsdqqcqzzgxqyz5vqrzjqf0wu22xsefd8gzu0m9n93g2khea86l6yy26en9v46g9e6hk7v9z8lhxhg6m9xwx8vqqqqryqqqqthqqpysp52yc3pjxkly5fanvj48hxlhph56gs32quxtyrajlmzupurtp8gv5s9qrsgqsm6zehy9mvkhl9nc3w73yaj2ygg7tn0hqa8k5r4vamrh2z5c3ctz9wa3sdgaatgeltqwh3l25um3de0ls0q3260wxpsqk526tlln6mcqsugdqs')"></i>
+            </div>
+            <div class="crypto-name">Bitcoin (Lightning)</div>
+            <div class="crypto-network">Network: Lightning</div>
+        </div>
+    </div>
+
+    <!-- Ethereum -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="eth-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0')"></i>
+            </div>
+            <div class="crypto-name">Ethereum (ETH)</div>
+            <div class="crypto-network">Network: Ethereum (ERC-20)</div>
+        </div>
+    </div>
+
+    <!-- Solana -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="sol-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">7PwVa5JdKWGc6kE3L6w3wJVzf5NL7iWQcYd8EpGB8nDq</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('7PwVa5JdKWGc6kE3L6w3wJVzf5NL7iWQcYd8EpGB8nDq')"></i>
+            </div>
+            <div class="crypto-name">Solana (SOL)</div>
+            <div class="crypto-network">Network: Solana</div>
+        </div>
+    </div>
+
+    <!-- Polygon -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="polygon-matic-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0')"></i>
+            </div>
+            <div class="crypto-name">Polygon (MATIC)</div>
+            <div class="crypto-network">Network: Polygon (ERC-20)</div>
+        </div>
+    </div>
+
+    <!-- Base -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="base-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0')"></i>
+            </div>
+            <div class="crypto-name">Base (ETH)</div>
+            <div class="crypto-network">Network: Base (L2)</div>
+        </div>
+    </div>
+
+    <!-- Sui -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="sui-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">0x85822b44069014ca5841f44ca78222376bbf31ea0d2567c12a418ba37da84355</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('0x85822b44069014ca5841f44ca78222376bbf31ea0d2567c12a418ba37da84355')"></i>
+            </div>
+            <div class="crypto-name">Sui (SUI)</div>
+            <div class="crypto-network">Network: Sui</div>
+        </div>
+    </div>
+
+  <!-- Tezos -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="tezos-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">tz1WACgqT4UpeTR2WfpodWGtbU3jmWqrL21T</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('tz1WACgqT4UpeTR2WfpodWGtbU3jmWqrL21T')"></i>
+            </div>
+            <div class="crypto-name">Tezos (TEZ)</div>
+            <div class="crypto-network">Network: Tezos Mainnet</div>
+        </div>
+    </div>
+
+    <!-- Cardano -->
+    <div class="crypto-column">
+        <div class="crypto-item">
+            <div class="qr-code" id="cardano-qr"></div>
+            <div class="address-container">
+                <span class="wallet-address">addr1qxu6yps02mdallnu07cwgdf822qa3sv0jux7ukr22rg5wm9e5grq74kmmll8clasus6jw55pmrqcl9cdaevx55x3gakqd55arm</span>
+                <i class="fa-regular fa-copy copy-icon" onclick="copyToClipboard('addr1qxu6yps02mdallnu07cwgdf822qa3sv0jux7ukr22rg5wm9e5grq74kmmll8clasus6jw55pmrqcl9cdaevx55x3gakqd55arm')"></i>
+            </div>
+            <div class="crypto-name">Cardano (ADA)</div>
+            <div class="crypto-network">Network: Cardano Mainnet</div>
+        </div>
+    </div>
+   
+</div>
+
+<div class="notification" id="notification">Address copied!</div>
+
+<!-- Links -->
+<div data-include="_links.html"></div>
+
+<!-- Footer -->
+<div data-include="_footer.html"></div>
+
+<!-- Cookie and Banner -->
+<div id="cookie-banner">
+  <h3><i class="fa-solid fa-cookie-bite"></i>Cookies & Analytics</h3>
+  <p>We use cookies to enhance your experience. Accept essential and analytics cookies. Some data may be transferred to
+    third countries (e.g. the USA).</p>
+  <button class="btn" onclick="setCookieConsent('accepted')">Accept</button>
+  <button class="btn reject" onclick="setCookieConsent('rejected')">Reject</button>
+</div>
+
+</div>
+
+
+<!-- Script Cookie and Banner -->
+<script>
+  const banner = document.getElementById('cookie-banner');
+  const consent = localStorage.getItem('cookieConsent');
+
+  if (!consent && banner) {
+    banner.style.display = 'block';
+  } else if (consent === 'accepted') {
+    loadGoogleAnalytics();
+  }
+
+  window.setCookieConsent = function (value) {
+    localStorage.setItem('cookieConsent', value);
+    if (banner) banner.style.display = 'none';
+
+    if (value === 'accepted') {
+      loadGoogleAnalytics();
+    }
+  };
+
+  function loadGoogleAnalytics() {
+    console.log("GA loaded");
+  }
+</script>
+
+
+<!-- QR-CODE -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+    // Format wallet address for display
+    function formatAddress(address) {
+        if (!address) return '';
+        if (address.length <= 12) return address;
+        if (address.startsWith('0x') && address.length === 42) {
+            return `${address.substring(0, 8)}...${address.substring(38)}`;
+        }
+        return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
+    }
+
+    // Wait for both DOM and QRCode library to be ready
+    function initQRCode() {
+        // Format all addresses
+        document.querySelectorAll('.wallet-address').forEach(el => {
+            const fullAddress = el.textContent;
+            el.textContent = formatAddress(fullAddress);
+            el.setAttribute('title', fullAddress);
+        });
+
+        // Check if QRCode is loaded
+        if (typeof QRCode === 'undefined') {
+            console.error('QRCode library not loaded');
+            return;
+        }
+
+        // Generate QR codes with error handling
+        try {
+            // BTC QR
+            new QRCode(document.getElementById("btc-qr"), {
+                text: "bitcoin:bc1qdlw03h9xcrkus5gee0legwes8gha8zmp6flujk",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            // BTC Lightning QR
+            new QRCode(document.getElementById("btc-lightning-qr"), {
+                text: "lightning:lnbc1p59q8yppp5pza2ur3n0sqw9hfgwapk7sx87psjz4cppzumaus5faukcydfn0jsdqqcqzzgxqyz5vqrzjqf0wu22xsefd8gzu0m9n93g2khea86l6yy26en9v46g9e6hk7v9z8lhxhg6m9xwx8vqqqqryqqqqthqqpysp52yc3pjxkly5fanvj48hxlhph56gs32quxtyrajlmzupurtp8gv5s9qrsgqsm6zehy9mvkhl9nc3w73yaj2ygg7tn0hqa8k5r4vamrh2z5c3ctz9wa3sdgaatgeltqwh3l25um3de0ls0q3260wxpsqk526tlln6mcqsugdqs",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            // ETH QR
+            new QRCode(document.getElementById("eth-qr"), {
+                text: "ethereum:0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            // SOL QR
+            new QRCode(document.getElementById("sol-qr"), {
+                text: "solana:7PwVa5JdKWGc6kE3L6w3wJVzf5NL7iWQcYd8EpGB8nDq",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            // Polygon QR
+            new QRCode(document.getElementById("polygon-matic-qr"), {
+                text: "polygon:0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            // Base QR
+            new QRCode(document.getElementById("base-qr"), {
+                text: "base:0x9d221226Bc96E65FBd220Bdd9EF3f9bBb035a0F0",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            // Sui QR
+            new QRCode(document.getElementById("sui-qr"), {
+                text: "sui:0x85822b44069014ca5841f44ca78222376bbf31ea0d2567c12a418ba37da84355",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+             // Tezos QR
+            new QRCode(document.getElementById("tezos-qr"), {
+                text: "tezos:tz1WACgqT4UpeTR2WfpodWGtbU3jmWqrL21T",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+             // Cardano QR
+            new QRCode(document.getElementById("cardano-qr"), {
+                text: "cardano:addr1qxu6yps02mdallnu07cwgdf822qa3sv0jux7ukr22rg5wm9e5grq74kmmll8clasus6jw55pmrqcl9cdaevx55x3gakqd55arm",
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+          
+        } catch (e) {
+            console.error('Error generating QR codes:', e);
+        }
+    }
+
+    // Wait for everything to load
+    if (document.readyState === 'complete') {
+        initQRCode();
+    } else {
+        window.addEventListener('load', initQRCode);
+    }
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            showNotification();
+        }, function(err) {
+            console.error('Failed to copy text: ', err);
+        });
+    }
+
+    function showNotification() {
+        const notification = document.getElementById('notification');
+        notification.classList.add('show');
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
