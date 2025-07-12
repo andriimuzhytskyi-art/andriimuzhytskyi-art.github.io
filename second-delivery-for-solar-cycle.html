@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrii Muzhytskyi Art</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
+        crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preload" href="profile.png" as="image">
+    <script src="js/code.js" defer></script>
+    <script src="js/include.js" defer></script>
+</head>
+
+<body class="loading">
+
+    <div class="container">
+
+        <!-- Menu -->
+        <div data-include="_menu.html"></div>
+
+        <header>
+            <!-- Header_up -->
+            <div data-include="_header.html"></div>
+        </header>
+
+        <!-- News -->
+
+        <article class="news-article">
+            <!-- Head -->
+            <h2>Second delivery for Solar Cycle</h2>
+
+            <!-- Date -->
+            <p class="date">July 12, 2025</p>
+
+            <!-- Picture -->
+            <figure>
+                <img src="/gallery/second-delivery-for-solar-cycle.jpg" alt="Second delivery for Solar Cycle">
+                <figcaption>Sketch: Flowers toward the Sun
+                </figcaption>
+            </figure>
+
+            <!-- Text -->
+            <div class="news-content">
+                <p>My Solar Cycle project didn’t reach its goal on Kickstarter, so I decided to buy the materials myself.
+                </p>
+                <p>Today I received the second delivery: purified linseed oil SCHMINCKE Leinöl gereinigt and retouching varnish Talens 004.
+                </p>
+                <p>Next week, I start creating!
+                </p>
+
+                <p>Warmly,<br>
+                    <strong>Andrii Muzhytskyi</strong>
+                </p>
+            </div>
+        </article>
+
+        <!-- Links -->
+        <div data-include="_links.html"></div>
+
+        <!-- Footer -->
+        <div data-include="_footer.html"></div>
+
+        <!-- Cookie and Banner -->
+        <div id="cookie-banner">
+            <h3><i class="fa-solid fa-cookie-bite"></i>Cookies & Analytics</h3>
+            <p>We use cookies to enhance your experience. Accept essential and analytics cookies. Some data may be
+                transferred to
+                third countries (e.g. the USA).</p>
+            <button class="btn" onclick="setCookieConsent('accepted')">Accept</button>
+            <button class="btn reject" onclick="setCookieConsent('rejected')">Reject</button>
+        </div>
+
+    </div>
+
+    <!-- Script Cookie and Banner -->
+    <script>
+        const banner = document.getElementById('cookie-banner');
+        const consent = localStorage.getItem('cookieConsent');
+
+        if (!consent && banner) {
+            banner.style.display = 'block';
+        } else if (consent === 'accepted') {
+            loadGoogleAnalytics();
+        }
+
+        window.setCookieConsent = function (value) {
+            localStorage.setItem('cookieConsent', value);
+            if (banner) banner.style.display = 'none';
+
+            if (value === 'accepted') {
+                loadGoogleAnalytics();
+            }
+        };
+
+        function loadGoogleAnalytics() {
+            console.log("GA loaded");
+        }
+
+        // Loading
+
+        window.onload = function () {
+            document.body.classList.remove('loading');
+            document.body.classList.add('loaded');
+        };
+    </script>
+
+</body>
+
+</html>
