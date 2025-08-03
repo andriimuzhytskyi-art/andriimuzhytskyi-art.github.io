@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "gallery"
+public_folder: "/gallery"
+
+collections:
+  - name: "studio-notes"
+    label: "Studio Notes"
+    folder: "_studio-notes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Video", name: "has_video", widget: "boolean", default: false }
+      - { label: "Disclaimer", name: "disclaimer", widget: "string", required: false }
+      - { label: "Text", name: "body", widget: "markdown" }
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "_gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Material", name: "material", widget: "string" }
+      - { label: "Type", name: "type", widget: "select", options: ["масло", "диджитал"] }
+      - { label: "Size", name: "size", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
