@@ -7,7 +7,7 @@ title: Studio Notes
 <p>Stories about process, progress, ongoing projects, and purpose.</p>
 
 <div class="notes-container">
-  {% for post in site.studio-notes %}
+  {% for post in site.studio-notes reversed %}
     <div class="notes-column">
       <img class="notes-image" src="{{ post.image }}" alt="{{ post.title }}">
       <div class="notes-text">
