@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: andriimuzhytskyi-art/andriimuzhytskyi-art.github.io
+  name: git-gateway
   branch: main
-  auth_type: implicit
-  client_id: Ov23li6fSQSiDKjR34X2
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
