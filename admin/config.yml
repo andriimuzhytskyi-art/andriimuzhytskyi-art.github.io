@@ -6,6 +6,11 @@ media_folder: "gallery"
 public_folder: "/gallery"
 
 collections:
+  studio-notes:
+    output: true
+    permalink: /:title/
+
+collections:
   - name: "studio-notes"
     label: "Studio Notes"
     folder: "_studio-notes"
