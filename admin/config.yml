@@ -1,7 +1,10 @@
 backend:
   name: github
-  repo: твой_логин_или_организация/имя_репозитория
-  branch: main  # или master, если у тебя так
+  repo: andriimuzhytskyi-art/andriimuzhytskyi-art.github.io
+  branch: main
+  auth_type: implicit
+  client_id: Ov23li6fSQSiDKjR34X2
+
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
