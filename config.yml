@@ -1,4 +1,0 @@
-collections:
-  studio-notes:
-    output: true
-    permalink: /:title/
