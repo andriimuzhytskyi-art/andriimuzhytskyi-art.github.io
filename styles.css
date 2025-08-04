@@ -436,6 +436,7 @@ main {
 .social-row a.tiktok:hover { color: #69C9D0; }
 .social-row a.youtube:hover { color: #FF0000; }
 .social-row a.threads:hover { color: #555; }
+.social-row a.facebook:hover { color: #0766ff; }
 
 .social-row a.patreon:hover { color: #F96854; }
 .social-row a.paypal:hover { color: #003087; }
