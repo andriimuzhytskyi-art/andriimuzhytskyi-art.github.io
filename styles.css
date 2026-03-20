@@ -1092,6 +1092,8 @@ header_up {
 .social-links a.saatchi:hover        { color: #c9492e; } 
 .social-links a.artfinder:hover        { color: #ea3a4f; }
 .social-links a.artmajeur:hover        { color: #221339; }
+.social-links a.singulart:hover        { color: #0B08C8; }
+.social-links a.artsy:hover        { color: #000000; }
 
 .social-links a.instagram:hover      { color: #E1306C; }
 .social-links a.xcom:hover           { color: #555; }
