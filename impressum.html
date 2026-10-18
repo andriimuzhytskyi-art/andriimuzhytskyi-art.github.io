@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrii Muzhytskyi Art</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      as="style"
+      crossorigin
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="profile.png" as="image" />
+    <script src="js/code.js" defer></script>
+    <script src="js/include.js" defer></script>
+  </head>
+
+  <body class="loading">
+    <div class="container">
+      <!--Return to Home-->
+      <div class="plate-about">
+        <div class="about-wrapper">
+          <div class="about-text-page-tracker-link">
+            <div class="about-link-text">
+              <p>
+                Return to
+                <a href="https://andriimuzhytskyi.art" class="about-link">
+                  <i class="ri-home-3-line"></i> Home</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impressum< -->
+      <div class="value-tracker">
+        <div class="tracker-title">
+          <h1>
+            <span class="title-value">Impressum</span>
+          </h1>
+        </div>
+
+        <div class="tracker-caption"></div>
+      </div>
+
+      <div class="plate-about">
+        <div class="about-wrapper">
+          <div class="about-text-page-tracker">
+            <div class="about-preview">
+              <p class="about-paragraph">Angaben gemäß § 5 TMG</p>
+              <p class="about-paragraph">
+                <strong>Name:</strong> Andrii Muzhytskyi
+              </p>
+              <p class="about-paragraph">
+                <strong>Anschrift:</strong> Märkische Straße 201, 44141
+                Dortmund, Deutschland
+              </p>
+              <p class="about-paragraph">
+                <strong>E-Mail:</strong> andriimuzhytskyi.art@gmail.com
+              </p>
+              <p class="about-paragraph">
+                <strong>Ausgeübter Beruf:</strong> UX/UI Designer und
+                freischaffender Künstler
+              </p>
+              <p class="about-paragraph">
+                <strong>Art der Tätigkeit:</strong> Freiberufliche Tätigkeit im
+                Bereich visuelle Gestaltung (UX/UI-Design) sowie freischaffende
+                künstlerische Tätigkeit (Malerei und digitale Illustration)
+              </p>
+              <p class="about-paragraph">
+                <strong>Zuständiges Finanzamt:</strong> Finanzamt Dortmund-West
+              </p>
+              <p class="about-paragraph">
+                <strong>Steuernummer:</strong> 317/5137/5663
+              </p>
+              <p class="about-paragraph">
+                <strong>Umsatzsteuer:</strong>
+                Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Return to Home-->
+      <div class="plate-about">
+        <div class="about-wrapper">
+          <div class="about-text-page-tracker-link">
+            <div class="about-link-text">
+              <p>
+                Return to
+                <a href="https://andriimuzhytskyi.art" class="about-link">
+                  <i class="ri-home-3-line"></i> Home</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <!--Links-->      
+    <div data-include="/includes/links.html"></div> 
+
+      <!-- Footer -->
+      <div data-include="/includes/footer-amart.html"></div>
+
+      <!-- Cookie and Banner -->
+      <div id="cookie-banner">
+        <h3><i class="fa-solid fa-cookie-bite"></i>Cookies & Analytics</h3>
+        <p>
+          We use cookies to enhance your experience. Accept essential and
+          analytics cookies. Some data may be transferred to third countries
+          (e.g. the USA).
+        </p>
+        <button class="btn" onclick="setCookieConsent('accepted')">
+          Accept
+        </button>
+        <button class="btn reject" onclick="setCookieConsent('rejected')">
+          Reject
+        </button>
+      </div>
+    </div>
+
+    <!-- Script Cookie and Banner -->
+    <script>
+      const banner = document.getElementById("cookie-banner");
+      const consent = localStorage.getItem("cookieConsent");
+
+      if (!consent && banner) {
+        banner.style.display = "block";
+      } else if (consent === "accepted") {
+        loadGoogleAnalytics();
+      }
+
+      window.setCookieConsent = function (value) {
+        localStorage.setItem("cookieConsent", value);
+        if (banner) banner.style.display = "none";
+
+        if (value === "accepted") {
+          loadGoogleAnalytics();
+        }
+      };
+
+      function loadGoogleAnalytics() {
+        if (window.gaLoaded) return;
+        window.gaLoaded = true;
+
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-2TP6MJ447Y";
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", "G-2TP6MJ447Y");
+
+        console.log("Google Analytics initialized");
+      }
+    </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelector(".fade-in-color").classList.add("loaded");
+      });
+    </script>
+  </body>
+</html>
