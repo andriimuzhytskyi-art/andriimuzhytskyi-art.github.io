@@ -1,0 +1,89 @@
+<!-- Tracker -->
+<div class="value-tracker">
+
+<div class="tracker">
+
+<div class="tracker-side tracker-left">
+    <span class="tracker-label">Value, €</span>
+    <div class="tracker-bar">
+      <span class="tracker-value" id="total-amount">0</span>
+    </div>
+  </div>
+
+<div class="tracker-photo">
+    <img src="profile.png" alt="Artist photo">
+  </div>
+
+  <div class="tracker-side tracker-right">
+    <span class="tracker-label">Experience, XP</span>
+    <div class="tracker-bar">
+      <span class="tracker-value" id="total-xp">0</span>
+    </div>
+  </div>
+
+</div>
+
+<p class="tracker-title-header">Andrii Muzyhtskyi Art</p>
+
+  <div class="tracker-title">
+    <h1>
+      <span class="title-bracket">[</span>
+      <span class="title-artist">Artist</span>
+      <span class="title-light"> & </span>
+      <span class="title-experience">Experience</span>
+      <span class="title-light">]</span>
+      <span class="title-separator"> </span>
+      <span class="title-value">Value Tracker</span>
+    </h1>
+  </div>
+
+  <div class="tracker-caption">
+    A transparent system showing how artistic value is formed — through process and result. 
+    <span class="tracker-status">
+    <i class="ri-flask-line"></i> In development.
+    </span>
+  </div>
+
+    <a href="https://andriimuzhytskyi.art/artist-and-experience-value-tracker.html" class="tracker-cta">
+      Discover how it works
+    </a>
+</div>
+<!-- Tracker value -->
+<script>
+  function updateTrackerValues() {
+    fetch("data/journal.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const totalAmount = data.reduce((sum, item) => {
+          if (!item.amount) return sum;
+          const numeric = Number(String(item.amount).replace(/[^\d]/g, ""));
+          return sum + (isNaN(numeric) ? 0 : numeric);
+        }, 0);
+
+        const totalXP = data.reduce((sum, item) => {
+          const xp = Number(item.xp);
+          return sum + (isNaN(xp) ? 0 : xp);
+        }, 0);
+
+        const amountEl = document.querySelector(".tracker-left .tracker-value");
+        const xpEl = document.querySelector(".tracker-right .tracker-value");
+
+        if (amountEl && xpEl) {
+          amountEl.textContent = totalAmount.toLocaleString("de-DE");
+          xpEl.textContent = totalXP;
+          return true; // Успешно обновили
+        }
+        return false; // Элементы еще не подгружены
+      })
+      .catch((error) => console.error("Ошибка загрузки JSON:", error));
+  }
+
+  // Запускаем проверку каждые 100 мс, пока инклюд не появится в DOM
+  const trackerInterval = setInterval(() => {
+    const amountEl = document.querySelector(".tracker-left .tracker-value");
+    if (amountEl) {
+      updateTrackerValues();
+      clearInterval(trackerInterval); // Останавливаем проверку, когда подгрузилось
+    }
+  }, 100);
+</script>
