@@ -1,129 +1,83 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andrii Muzhytskyi Art</title>
-    <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      as="style"
-      crossorigin
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preload" href="profile.png" as="image" />
-    <script src="js/code.js" defer></script>
-    <script src="js/include.js" defer></script>
-  </head>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum | Andrii Muzhytskyi Art</title>
 
-  <body class="loading">
-    <div class="container">
-      <!--Return to Home-->
-      <div class="plate-about">
-        <div class="about-wrapper">
-          <div class="about-text-page-tracker-link">
-            <div class="about-link-text">
-              <p>
-                Return to
-                <a href="https://andriimuzhytskyi.art" class="about-link">
-                  <i class="ri-home-3-line"></i> Home</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+
+  <!-- Material Symbols (иконка в карточке) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4fade377ce.js" crossorigin="anonymous"></script>
+
+  <!-- Remixicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" />
+
+  <script src="js/code.js" defer></script>
+  <script src="js/include.js" defer></script>
+</head>
+
+<body class="loading">
+
+  <!-- Header -->
+<header class="site-header">
+  <a href="/" class="site-title">Andrii Muzhytskyi Art</a>
+
+  <div class="header-right">
+    <!-- Tracker -->
+    <div data-include="/includes/tracker.html"></div>
+
+    <button type="button" class="header-menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false">
+      <i class="ri-more-2-fill"></i>
+    </button>
+
+    <div data-include="/includes/menu.html"></div>
+
+  </div>
+</header>
+
+  <!-- Title -->
+  <div class="page-hero">
+    <h1 class="page-title">Impressum</h1>
+  </div>
+
+  <!-- Impressum -->
+  <div class="info-wrap">
+    <section class="info-card">
+      <div class="info-icon"><span class="material-symbols-outlined">gavel</span></div>
+      <h2 class="info-title">Angaben gemäß § 5 TMG</h2>
+      <div class="info-text">
+        <p><strong>Name:</strong> Andrii Muzhytskyi</p>
+        <p><strong>Anschrift:</strong> Märkische Straße 201, 44141 Dortmund, Deutschland</p>
+        <p><strong>E-Mail:</strong> andriimuzhytskyi.art@gmail.com</p>
+        <p><strong>Ausgeübter Beruf:</strong> UX/UI Designer und freischaffender Künstler</p>
+        <p>
+          <strong>Art der Tätigkeit:</strong> Freiberufliche Tätigkeit im Bereich visuelle Gestaltung (UX/UI-Design)
+          sowie freischaffende künstlerische Tätigkeit (Malerei und digitale Illustration)
+        </p>
+        <p><strong>Zuständiges Finanzamt:</strong> Finanzamt Dortmund-West</p>
+        <p><strong>Steuernummer:</strong> 317/5137/5663</p>
+        <p><strong>Umsatzsteuer:</strong> Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
       </div>
+    </section>
+  </div>
 
-      <!-- Impressum< -->
-      <div class="value-tracker">
-        <div class="tracker-title">
-          <h1>
-            <span class="title-value">Impressum</span>
-          </h1>
-        </div>
+  <!-- Links -->
+  <div data-include="/includes/links.html"></div>
 
-        <div class="tracker-caption"></div>
-      </div>
-
-      <div class="plate-about">
-        <div class="about-wrapper">
-          <div class="about-text-page-tracker">
-            <div class="about-preview">
-              <p class="about-paragraph">Angaben gemäß § 5 TMG</p>
-              <p class="about-paragraph">
-                <strong>Name:</strong> Andrii Muzhytskyi
-              </p>
-              <p class="about-paragraph">
-                <strong>Anschrift:</strong> Märkische Straße 201, 44141
-                Dortmund, Deutschland
-              </p>
-              <p class="about-paragraph">
-                <strong>E-Mail:</strong> andriimuzhytskyi.art@gmail.com
-              </p>
-              <p class="about-paragraph">
-                <strong>Ausgeübter Beruf:</strong> UX/UI Designer und
-                freischaffender Künstler
-              </p>
-              <p class="about-paragraph">
-                <strong>Art der Tätigkeit:</strong> Freiberufliche Tätigkeit im
-                Bereich visuelle Gestaltung (UX/UI-Design) sowie freischaffende
-                künstlerische Tätigkeit (Malerei und digitale Illustration)
-              </p>
-              <p class="about-paragraph">
-                <strong>Zuständiges Finanzamt:</strong> Finanzamt Dortmund-West
-              </p>
-              <p class="about-paragraph">
-                <strong>Steuernummer:</strong> 317/5137/5663
-              </p>
-              <p class="about-paragraph">
-                <strong>Umsatzsteuer:</strong>
-                Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--Return to Home-->
-      <div class="plate-about">
-        <div class="about-wrapper">
-          <div class="about-text-page-tracker-link">
-            <div class="about-link-text">
-              <p>
-                Return to
-                <a href="https://andriimuzhytskyi.art" class="about-link">
-                  <i class="ri-home-3-line"></i> Home</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-          <!--Links-->      
-    <div data-include="/includes/links.html"></div> 
-
-      <!-- Footer -->
-      <div data-include="/includes/footer-amart.html"></div>
+  <!-- Footer -->
+  <div data-include="/includes/footer-amart.html"></div>
 
       <!-- Cookie and Banner -->
       <div id="cookie-banner">
@@ -184,10 +138,70 @@
       }
     </script>
 
+    <!-- Process Journal -->
+    <script src="/js/journal.js"></script>
+
+    <!-- Menu -->
     <script>
-      window.addEventListener("load", () => {
-        document.querySelector(".fade-in-color").classList.add("loaded");
-      });
-    </script>
-  </body>
+  document.addEventListener("click", (e) => {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("header-menu");
+    if (!btn || !menu) return;
+
+    if (btn.contains(e.target)) {
+      const open = menu.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open);
+    } else if (!menu.contains(e.target)) {
+      menu.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const menu = document.getElementById("header-menu");
+      if (menu) menu.classList.remove("open");
+    }
+  });
+</script>
+
+    <!-- Tracker data update -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    function updateTracker() {
+      fetch("data/journal.json")
+        .then(response => {
+          if (!response.ok) throw new Error("Network response was not ok");
+          return response.json();
+        })
+        .then(data => {
+          const totalAmount = data.reduce((sum, item) => {
+            if (!item.amount) return sum;
+            const numeric = Number(String(item.amount).replace(/[^\d]/g, ""));
+            return sum + (isNaN(numeric) ? 0 : numeric);
+          }, 0);
+
+          const totalXP = data.reduce((sum, item) => {
+            const xp = Number(item.xp);
+            return sum + (isNaN(xp) ? 0 : xp);
+          }, 0);
+
+          const amountEl = document.querySelector(".tracker-left .tracker-value");
+          const xpEl = document.querySelector(".tracker-right .tracker-value");
+
+          if (amountEl) amountEl.textContent = totalAmount.toLocaleString("de-DE");
+          if (xpEl) xpEl.textContent = totalXP;
+        })
+        .catch(err => console.error("Ошибка загрузки journal.json:", err));
+    }
+    const checkInterval = setInterval(() => {
+      if (document.querySelector(".tracker-left .tracker-value")) {
+        updateTracker();
+        clearInterval(checkInterval);
+      }
+    }, 100);
+  });
+</script>
+
+</body>
 </html>

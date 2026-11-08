@@ -1,31 +1,47 @@
 [
-  {
-    "date": "03/11/2026",
-    "event": "<strong>Acrylic Paint Testing. Material Exploration & Publication</strong><br>Testing Schmincke Akademie Acryl Color (Cadmium Red Hue). Evaluation of color intensity, opacity and coverage when diluted with water. Practical exploration of a new painting material. Video publication on social media.",
+    {
+    "date": "08/11/2026",
+    "event": "<strong>Updated Website Design</strong><br>A new minimalist look. Now it is easier to follow my activity on my personal website.",
     "link": "",
     "amount": "",
-    "xp": 4
+    "xp": 2,
+    "image": "/gallery/journal/08-11-2026_Update-design.webp",
+  "youtube": "",
+  "tiktok": ""
   },
   {
-    "date": "25/10/2026",
-    "event": "<strong>Inner World. Digital Artwork & Publication</strong><br>Creation of a surreal digital artwork exploring the artist’s inner world as a space of continuous construction. Publication of the finished artwork on social media.",
+    "date": "03/11/2026",
+    "event": "<strong>Testing a New Acrylic Paint</strong><br>Testing Schmincke Akademie Acryl Color (Cadmium Red Hue): color intensity, opacity and coverage when diluted with water.",
     "link": "",
     "amount": "",
-    "xp": 12
+    "xp": 4,
+    "image": "",
+  "youtube": "https://youtube.com/shorts/JikgF__YXHA",
+  "tiktok": ""
+  },
+  { 
+    "date": "25/10/2026",
+    "event": "<strong>Inner World</strong><br>A surreal digital artwork exploring the artist’s inner world as a space of continuous construction.",
+    "link": "",
+    "amount": "",
+    "xp": 12,
+    "image": "/gallery/journal/25-10-2026_Inner-World.webp"
   },
   {
     "date": "19/10/2026",
-    "event": "<strong>Process Journal & Value Tracker Setup</strong><br>Technical optimization of the Process Journal and configuration of automatic data calculations for the Value Tracker.",
+    "event": "<strong>Process Journal & Value Tracker Setup</strong><br>Optimizing the Process Journal and setting up automatic calculations for the Value Tracker.",  
     "link": "",
     "amount": "",
-    "xp": 2
+    "xp": 2,
+    "image": "/gallery/journal/19-10-2026_Process-Journal_Value-Tracker-Setup.webp"
   },
   {
     "date": "04/10/2026",
-    "event": "<strong>Krefeld. Artistic Research.</strong><br>Museum visits and visual research: Museum Burg Linn, Jagdschloss, Burg Linn, German Textile Museum.",
+    "event": "<strong>Krefeld. Artistic Research</strong><br>Museum visits and visual research: Museum Burg Linn, Jagdschloss Burg Linn, German Textile Museum.",
     "link": "",
     "amount": "",
-    "xp": 3
+    "xp": 3,
+    "image": "/gallery/journal/04-10-2026_Krefeld-Artistic-Research.webp"
   },
   {
     "date": "12/07/2026",
@@ -64,14 +80,14 @@
   },
   {
     "date": "02/01/2026",
-    "event": "<strong>Dresden. Artistic Research (Day 2).</strong><br> Museum visits and visual research: Residenzschloss; SKD | Staatliche Kunstsammlungen Dresden — Grünes Gewölbe, Türckische Cammer.",
+    "event": "<strong>Dresden. Artistic Research (Day 2)</strong><br>Museum visits and visual research: Residenzschloss and the Staatliche Kunstsammlungen Dresden: Grünes Gewölbe, Türckische Cammer.",
     "link": "",
     "amount": "",
     "xp": 3
   },
   {
     "date": "01/01/2026",
-    "event": "<strong>Dresden. Artistic Research (Day 1).</strong><br> Museum visits and visual research: Dresdner Zwinger complex — Gemäldegalerie Alte Meister, Porzellansammlung, Mathematisch-Physikalischer Salon; Albertinum.",
+    "event": "<strong>Dresden. Artistic Research (Day 1)</strong><br>Museum visits and visual research: Zwinger complex (Gemäldegalerie Alte Meister, Porzellansammlung, Mathematisch-Physikalischer Salon) and Albertinum.",
     "link": "",
     "amount": "",
     "xp": 3

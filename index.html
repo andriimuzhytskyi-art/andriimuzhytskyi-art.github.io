@@ -19,7 +19,9 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
     rel="stylesheet"
   />
- <!-- Font Awesome (v7) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome (v7) -->
 <script src="https://kit.fontawesome.com/4fade377ce.js" crossorigin="anonymous"></script>
 
   <!-- Remixicon -->
@@ -31,12 +33,37 @@
 </head>
 
   <body class="loading">
-    <!-- Menu -->
-    <div data-include="/includes/menu-amart.html"></div>
+
+<!-- Header -->
+<header class="site-header">
+  <a href="/" class="site-title">Andrii Muzhytskyi Art</a>
+
+  <div class="header-right">
+    <!-- Tracker -->
+    <div data-include="/includes/tracker.html"></div>
+
+    <button type="button" class="header-menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false">
+      <i class="ri-more-2-fill"></i>
+    </button>
+
+    <div data-include="/includes/menu.html"></div>
+
+  </div>
+</header>
+
+
+
+    <!-- Process Journal -->
+
+      <section class="process-journal">
+        <div class="plate-journal">
+          <div id="journal-container"></div>
+          <button id="load-more" class="load-more-btn">Load more</button>
+        </div>
+      </section>
 
     <div class="container">
-      <!-- Tracker -->
-      <div data-include="/includes/tracker.html"></div>
+
 
       <!-- Carousel -->
       <div class="work-carousel">
@@ -92,154 +119,26 @@
 
       <!-- About me -->
       <div id="about-me"></div>
-      <div class="about-heading">
-        <h3><i class="ri-info-i"></i> About me</h3>
-        <p class="about-heading-text">
-          Where the idea comes first, and form becomes language.
-        </p>
-      </div>
 
       <div class="plate-about">
         <div class="about-wrapper">
-          <input type="checkbox" id="about-toggle" class="about-checkbox" />
-
+          <div class="about-photo"><img src="profile.png" alt="Andrii Muzhytskyi" /></div>
+          
           <div class="about-text">
             <!-- always visible -->
             <div class="about-preview">
-              <p class="about-paragraph">
-                I am <strong>Andrii Muzhytskyi</strong>, a painter working in oil and digital media. 
-                My work sits at the intersection of art, concept, and visual structure.
-              </p>
-              <p class="about-paragraph">
-                I am driven by meaning, state, and the internal logic of the image. 
-                I work with minimalism, symbolism, and surrealism: complex ideas in simple forms. 
-                For me, it is essential that a work not only looks aesthetic, but also provokes reflection and creates an inner response.
-              </p>
-              <p class="about-paragraph">
-                I am drawn to clean, restrained solutions with no accidental elements and no visual noise. 
-                Every form has to earn its place, and the idea always comes first.
-              </p>
-               <p class="about-paragraph">
-                Alongside my art, I work as a <a href="https://bio.link/andrii_digital">UX/UI designer</a>.
-              </p>
 
+              <p class="about-paragraph">
+            I am <strong>Andrii Muzhytskyi</strong>, a painter working in oil and digital media,
+            where art, concept, and visual structure meet.
+            </p>
+            <p class="about-paragraph"> I work with minimalism, symbolism,
+            and surrealism: complex ideas in simple forms, with no visual noise, where the idea always comes first.</p>
             </div>
           </div>
-          <label for="about-toggle" class="about-button"></label>
+          
         </div>
       </div>
-
-      <div id="process-journal"></div>
-
-      <!-- Process Journal -->
-
-      <section class="process-journal">
-        <div class="journal-heading">
-          <h3><i class="ri-flow-chart"></i> Process Journal</h3>
-          <p class="journal-heading-text">
-            Thoughts, sketches, and decisions behind the work.
-          </p>
-        </div>
-        <div class="plate-journal">
-          <div id="journal-container"></div>
-          <button id="load-more" class="load-more-btn">Load more</button>
-        </div>
-      </section>
-
-
-      <!-- Roadmap 2026 -->
-      <id="roadmap-2026">
-      <div class="container-roadmap" id="roadmap-2026">
-        <div class="roadmap-heading">
-          <h3><i class="ri-signpost-line"></i> Roadmap 2026</h3>
-          <p class="roadmap-heading-text">
-            My artistic direction and current development.
-          </p>
-        </div>
-
-        <!--IN PROGRESS -->
-
-        <div class="timeline-item" id="live-item">
-          <div class="timeline-header">
-            <div class="title-info">
-              <h3>IN PROGRESS</h3>
-            </div>
-            <div class="right-side">
-              <span class="status status-live">
-              <i class="ri-brush-line"></i> Live</span>
-              <i class="ri-arrow-down-s-line arrow-icon"></i>
-            </div>
-          </div>
-          <div class="timeline-content">
-            <div class="roadmap-track">
-              <ul class="track-tasks">
-                <li class="paint-description">Creation of new oil paintings</li>
-                <li class="paint-description">Development of the “Solar Cycle” series</li>
-                <li class="paint-description">Development of “Time” series</li>
-                <li class="paint-description">Development of Level 4 / Level 5 works</li>
-                <li class="paint-description">Preparation of digital works for NFT</li>
-                <li class="paint-description">Developing a professional presence in Germany</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!--COMPLETED-->
-
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div class="title-info">
-              <h3>COMPLETED</h3>
-            </div>
-            <div class="right-side">
-              <span class="status status-upcoming">Done</span>
-              <i class="ri-arrow-down-s-line arrow-icon"></i>
-            </div>
-          </div>
-          <div class="timeline-content">
-            <div class="roadmap-track">
-              <ul class="track-tasks">
-                <li class="paint-description">Development of the artist website and portfolio structure</li>
-                <li class="paint-description">Preparation of digital versions of selected oil paintings</li>
-                <li class="paint-description">Development of the Artist & Experience Value Tracker</li>
-                <li class="paint-description">Research and preparation of NFT infrastructure</li>
-                <li class="paint-description">Initial development of the “Solar Cycle” direction</li>
-              </ul>
-            </div>
-            
-          </div>
-        </div>
-
-        <!-- NEXT -->
-
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div class="title-info">
-              <h3>NEXT</h3>
-            </div>
-            <div class="right-side">
-              <span class="status status-upcoming">Upcoming</span>
-              <i class="ri-arrow-down-s-line arrow-icon"></i>
-            </div>
-          </div>
-          <div class="timeline-content">
-            <div class="roadmap-track">
-              <ul class="track-tasks">
-                <li class="paint-description">Completion and presentation of selected series</li>
-                <li class="paint-description">Launch of NFT collections</li>
-                <li class="paint-description">Online and offline presentation of works</li>
-                <li class="paint-description">Collaboration with German galleries</li>
-                <li class="paint-description">Further development of the Artist & Experience system</li>
-                <li class="paint-description">Museum-oriented presentation of selected works</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-      <div id="social-links"></div>
 
       <!--Links-->      
     <div data-include="/includes/links.html"></div> 
@@ -306,57 +205,32 @@
       }
     </script>
 
-    <!-- Roadmap accordion -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const headers = document.querySelectorAll(".timeline-header");
-        const items = document.querySelectorAll(".timeline-item");
-
-        headers.forEach((header) => {
-          header.addEventListener("click", () => {
-            const parentItem = header.parentElement;
-            const isCurrentlyOpen = parentItem.classList.contains("open");
-
-            items.forEach((item) => {
-              item.classList.remove("open");
-              const content = item.querySelector(".timeline-content");
-              if (content) content.classList.remove("open");
-            });
-
-            if (!isCurrentlyOpen) {
-              parentItem.classList.add("open");
-              const content = parentItem.querySelector(".timeline-content");
-              if (content) content.classList.add("open");
-            }
-          });
-        });
-
-        const liveItem = document.getElementById("live-item");
-        if (liveItem) {
-          items.forEach((item) => {
-            item.classList.remove("open");
-            const content = item.querySelector(".timeline-content");
-            if (content) content.classList.remove("open");
-          });
-
-          liveItem.classList.add("open");
-          const liveContent = liveItem.querySelector(".timeline-content");
-          if (liveContent) liveContent.classList.add("open");
-        }
-      });
-    </script>
-
-<script>
-      window.addEventListener("load", () => {
-        const element = document.querySelector(".fade-in-color");
-        if (element) {
-          element.classList.add("loaded");
-        }
-      });
-    </script>
-
     <!-- Process Journal -->
     <script src="/js/journal.js"></script>
+
+    <!-- Menu -->
+    <script>
+  document.addEventListener("click", (e) => {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("header-menu");
+    if (!btn || !menu) return;
+
+    if (btn.contains(e.target)) {
+      const open = menu.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open);
+    } else if (!menu.contains(e.target)) {
+      menu.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const menu = document.getElementById("header-menu");
+      if (menu) menu.classList.remove("open");
+    }
+  });
+</script>
 
     <!-- Tracker data update -->
 <script>
