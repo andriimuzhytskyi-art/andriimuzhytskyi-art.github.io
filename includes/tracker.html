@@ -1,3 +1,4 @@
+
 <!-- Tracker -->
 <div class="value-tracker">
   <a href="/artist-and-experience-value-tracker.html" class="tracker">
@@ -12,42 +13,49 @@
     </span>
   </a>
 </div>
-<!-- Tracker value -->
+
+<!-- Tracker values -->
 <script>
   function updateTrackerValues() {
-    fetch("data/journal.json")
-      .then((response) => response.json())
+    fetch("/data/journal.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => {
         const totalAmount = data.reduce((sum, item) => {
-          if (!item.amount) return sum;
-          const numeric = Number(String(item.amount).replace(/[^\d]/g, ""));
-          return sum + (isNaN(numeric) ? 0 : numeric);
+          if (item.amount == null) return sum;
+
+          const numeric = Number(
+            String(item.amount).replace(/[^\d.-]/g, "")
+          );
+
+          return sum + (Number.isFinite(numeric) ? numeric : 0);
         }, 0);
 
         const totalXP = data.reduce((sum, item) => {
           const xp = Number(item.xp);
-          return sum + (isNaN(xp) ? 0 : xp);
+          return sum + (Number.isFinite(xp) ? xp : 0);
         }, 0);
 
-        const amountEl = document.querySelector(".tracker-left .tracker-value");
-        const xpEl = document.querySelector(".tracker-right .tracker-value");
+        const amountEl = document.querySelector(
+          ".tracker-left .tracker-value"
+        );
+        const xpEl = document.querySelector(
+          ".tracker-right .tracker-value"
+        );
 
-        if (amountEl && xpEl) {
-          amountEl.textContent = totalAmount.toLocaleString("de-DE");
-          xpEl.textContent = totalXP;
-          return true; // Успешно обновили
-        }
-        return false; // Элементы еще не подгружены
+        if (!amountEl || !xpEl) return;
+
+        amountEl.textContent = totalAmount.toLocaleString("de-DE");
+        xpEl.textContent = totalXP;
       })
-      .catch((error) => console.error("Ошибка загрузки JSON:", error));
+      .catch((error) =>
+        console.error("Failed to load journal.json:", error)
+      );
   }
 
-  // Запускаем проверку каждые 100 мс, пока инклюд не появится в DOM
-  const trackerInterval = setInterval(() => {
-    const amountEl = document.querySelector(".tracker-left .tracker-value");
-    if (amountEl) {
-      updateTrackerValues();
-      clearInterval(trackerInterval); // Останавливаем проверку, когда подгрузилось
-    }
-  }, 100);
+  updateTrackerValues();
 </script>

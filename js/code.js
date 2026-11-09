@@ -26,7 +26,7 @@ function toggleMenu() {
   const icon = document.querySelector('.menu-icon i');
   const wrapper = document.querySelector('.menu-icon');
 
-  // Безопасная проверка существования элементов меню
+  
   if (!panel || !overlay) return;
 
   panel.classList.toggle('show');

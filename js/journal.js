@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadJournal() {
     try {
-      const res = await fetch('/data/journal.json'); // путь правильный
+      const res = await fetch('/data/journal.json'); 
       if (!res.ok) throw new Error('Failed to load JSON');
       entries = await res.json();
       showNextEntries();
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ].filter(Boolean);
 
       const ytId = entry.youtube ? getYouTubeId(entry.youtube) : null;
-      const videoThumb = ytId && !entry.image;   // видео есть, своего фото нет
+      const videoThumb = ytId && !entry.image;   
       const thumbImg = videoThumb ? `https://img.youtube.com/vi/${ytId}/mqdefault.jpg` : '';
       const div = document.createElement('div');
       div.className = 'journal-entry';
@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const loadMoreBtn = document.getElementById('load-more');
   if (loadMoreBtn) loadMoreBtn.addEventListener('click', showNextEntries);
 
-    // ----- Окно с видео YouTube -----
   function getYouTubeId(url) {
     const m = url.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);
     return m ? m[1] : null;
@@ -84,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeModal() {
     modal.classList.remove('open');
-    frame.innerHTML = ''; // останавливает видео
+    frame.innerHTML = ''; 
   }
 
   document.getElementById('journal-container').addEventListener('click', e => {

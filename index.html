@@ -5,30 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andrii Muzhytskyi Art</title>
 
-  <!-- Favicon & Stylesheets -->
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Preconnect & Preload Resources -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="profile.png" as="image" />
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
-    rel="stylesheet"
-  />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome (v7) -->
-<script src="https://kit.fontawesome.com/4fade377ce.js" crossorigin="anonymous"></script>
-
   <!-- Remixicon -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"/>
+  <link rel="stylesheet" href="/fonts/remixicon/remixicon.css" />
 
-  <!-- Scripts -->
-  <script src="js/code.js" defer></script>
   <script src="js/include.js" defer></script>
 </head>
 
@@ -259,7 +242,7 @@
           if (amountEl) amountEl.textContent = totalAmount.toLocaleString("de-DE");
           if (xpEl) xpEl.textContent = totalXP;
         })
-        .catch(err => console.error("Ошибка загрузки journal.json:", err));
+        .catch(err => console.error("Failed to load journal.json:", err));
     }
     const checkInterval = setInterval(() => {
       if (document.querySelector(".tracker-left .tracker-value")) {
